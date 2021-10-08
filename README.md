@@ -10,5 +10,7 @@
 
 ## [Projeto final:](./Projeto/README.md) 
 
-Apresente uma breve descrição do seu projeto.
+O meu projeto é um site web onde qualquer pessoa pode acessar, e inserir seu curriculo, de modo a ficar a mostra e empresas conseguirem ve-lo com uma maior facilidade.
+Um diferencial é a presença do portifólio no proprio curriculo, de modo a apresentar seus projetos de maneira mais simples.
+Alem disso, as empresas tambem conseguem fazer cadastos de vagas para que o usuário consiga se candidatar a ela.
 
