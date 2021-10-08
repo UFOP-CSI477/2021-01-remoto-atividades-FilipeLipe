@@ -2,11 +2,11 @@
 
 ## Atualize os seus dados:
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Filipe Nunes Soares
+- Matrícula: 18.2.8084
+- Curso: Sistemas de Informação
+- Semestre/Ano correntes: 6 Periodo
+- Link para o seu GitHub: https://github.com/FilipeLipe
 
 ## [Projeto final:](./Projeto/README.md) 
 
