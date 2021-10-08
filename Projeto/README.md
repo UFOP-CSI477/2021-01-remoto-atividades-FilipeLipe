@@ -1,15 +1,15 @@
-# **CSI606-2021-01 - Remoto - Trabalho Final**
+# **CSI606-2021-01 - Proposta Trabalho Final**
 
-#  Proposta de Trabalho Final
-## *Aluna(o): Princesa Leia (Luke Skywalker)*
+## *Aluna(o): Filipe Nunes Soares*
 
 --------------
 
 <!-- Descrever um resumo sobre o trabalho. -->
 
 ### Resumo
-
-  (Apresentar um breve resumo sobre o seu trabalho, indicando o contexto e as principais funcionalidades.)
+  
+  Imprimir seu currículo e passar de loja em loja entregando ficou no passado, com o site "Jobs" o usuário pode se cadastrar e colocar o currículo com um diferencial de apresentar de forma rápida e simples o seu portfólio com os projetos pessoais, de modo que os avaliadores possam te enxergar com outros olhos e contrata-lo. 
+  Outra funcionalidade é pelo lado da empresa que pode de forma rápida colocar vagas a disposição para que os usuários possam se candidatar.
 
 <!-- Apresentar o tema. -->
 ### 1. Tema
