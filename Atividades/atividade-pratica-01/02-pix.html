@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>PIX</title>
+        <link rel="stylesheet" type="text/css" href="02-pix.css"/>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <form>
+                <div>
+                    <select id="Camposelect">
+                        <option value="valor1" selected>CPF</option>
+                        <option value="valor2">CNPJ</option>
+                        <option value="valor3">E - Mail</option>
+                        <option value="valor3">Numero de Telefone</option>
+                        <option value="valor3">Chave Aleatoria</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="text" class="CampoTexto" placeholder="Chave Pix">
+                </div>
+                <div>
+                    <input type="radio" id="contactChoice1" name="contact" value="enviar">
+                    <label for="contactChoice1">Enviar</label>
+                    <br>
+                    <input type="radio" id="contactChoice2" name="contact" value="receber">
+                    <label for="contactChoice2">Receber</label>
+                  </div>
+                  <div>
+                    <input type="text" class="CampoTexto" placeholder="Valor">
+                  </div>
+                  <div>
+                    <input type="date" class="CampoData">
+                  </div>
+                  <div>
+                    <input type="submit" id="botao">
+                  </div>
+            </form>
+        </div>
+    </body>
+</html>
