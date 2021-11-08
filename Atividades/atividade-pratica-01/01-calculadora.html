@@ -7,45 +7,46 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
         </style>
+        <script src="01-calculadora.js"></script>
     </head>
     <body>
         <div>
-            <h1 id="visor"> 10 * 10 = 100</h1>>
+            <h1 id="visor"> </h1>>
         </div>
         <table id="tabela">
             <tr>
-                <td><input type="button" class="botao" value="CE"></td>
-                <td><input type="button" class="botao" value="C"></td>
-                <td><input type="button" class="botao" value="^"></td>
-                <td><input type="button" class="botao" value="/"></td>
+                <td><input type="button" class="botao" onclick="apagar()" value="CE"></td>
+                <td><input type="button" class="botao" onclick="limpar()" value="C"></td>
+                <td><input type="button" class="botao" onclick="adcionarNumero('**')" value="^"></td>
+                <td><input type="button" class="botao" onclick="adcionarNumero('/')" value="/"></td>
             </tr>
 
             <tr>
-                <td><input type="button" class="botao" value="7"></td>
-                <td><input type="button" class="botao" value="8"></td>
-                <td><input type="button" class="botao" value="9"></td>
-                <td><input type="button" class="botao" value="*"></td>
+                <td><input type="button" class="botao" onclick="adcionarNumero('7')" value="7"></td>
+                <td><input type="button" class="botao" onclick="adcionarNumero('8')" value="8"></td>
+                <td><input type="button" class="botao" onclick="adcionarNumero('9')" value="9"></td>
+                <td><input type="button" class="botao" onclick="adcionarNumero('*')" value="*"></td>
             </tr>
 
             <tr>
-                <td><input type="button" class="botao" value="4"></td>
-                <td><input type="button" class="botao" value="5"></td>
-                <td><input type="button" class="botao" value="6"></td>
-                <td><input type="button" class="botao" value="-"></td>
+                <td><input type="button" class="botao" onclick="adcionarNumero('4')" value="4"></td>
+                <td><input type="button" class="botao" onclick="adcionarNumero('5')" value="5"></td>
+                <td><input type="button" class="botao" onclick="adcionarNumero('6')" value="6"></td>
+                <td><input type="button" class="botao" onclick="adcionarNumero('-')" value="-"></td>
             </tr>
 
             <tr>
-                <td><input type="button" class="botao" value="1"></td>
-                <td><input type="button" class="botao" value="2"></td>
-                <td><input type="button" class="botao" value="3"></td>
-                <td><input type="button" class="botao" value="+"></td>
+                <td><input type="button" class="botao" onclick="adcionarNumero('1')" value="1"></td>
+                <td><input type="button" class="botao" onclick="adcionarNumero('2')" value="2"></td>
+                <td><input type="button" class="botao" onclick="adcionarNumero('3')" value="3"></td>
+                <td><input type="button" class="botao" onclick="adcionarNumero('+')" value="+"></td>
             </tr>
 
             <tr>
-                <td><input type="button" class="botao" value="+/-"></td>
-                <td><input type="button" class="botao" value="0"></td>
-                <td><input type="button" class="botao" value=","></td>
-                <td><input type="button" class="botao" value="="></td>
+                <td><input type="button" class="botao" onclick="invert()" value="+/-"></td>
+                <td><input type="button" class="botao" onclick="adcionarNumero('0')" value="0"></td>
+                <td><input type="button" class="botao" onclick="adcionarNumero('.')" value=","></td>
+                <td><input type="button" class="botao" onclick="equal()" value="="></td>
             </tr>
 
         </table>
