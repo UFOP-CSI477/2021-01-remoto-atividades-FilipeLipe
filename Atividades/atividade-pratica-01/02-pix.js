@@ -23,21 +23,24 @@ function finalizar(){
     const transacao = new Transacao(tipoChave, chave, status, valor, data);
     console.log(transacao)
     
-    document.getElementById("status2").innerHTML = transacao.status
-    document.getElementById("valor2").innerHTML = ("R$" + transacao.valor)
-    document.getElementById("chave2").innerHTML = ("Chave: " + transacao.chave)
-    document.getElementById("tipochave2").innerHTML = ("Tipo: " + transacao.tipoChave)
-    document.getElementById("data2").innerHTML = ("Data: " + transacao.data)
-    
     if(transacao.status == "SAIDA"){
-        saldo = saldo - parseInt(transacao.valor)
-    }else{
-        saldo = saldo + parseInt(transacao.valor)
+        if(transacao.valor > saldo){
+            alert("SALDO INSUFICIENTE")
+        }else{
+            document.getElementById("status2").innerHTML = transacao.status
+            document.getElementById("valor2").innerHTML = ("R$" + transacao.valor)
+            document.getElementById("chave2").innerHTML = ("Chave: " + transacao.chave)
+            document.getElementById("tipochave2").innerHTML = ("Tipo: " + transacao.tipoChave)
+            document.getElementById("data2").innerHTML = ("Data: " + transacao.data)
+        
+        if(transacao.status == "SAIDA"){
+            saldo = saldo - parseInt(transacao.valor)
+        }else{
+            saldo = saldo + parseInt(transacao.valor)
+        }
     }
+        
     
     document.getElementById("visor").innerHTML = "Saldo: R$ "+ saldo
-
+    }
 }
-
-
-
