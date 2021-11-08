@@ -7,11 +7,6 @@ function Transacao(tipoChave, chave, status, valor, data){
     this.data = data;
 }
 
-function Transacao2(chave, valor){
-    this.chave = chave;
-    this.valor = valor;
-}
-
 function finalizar(){
     
     const tipoChave = document.formulario.tipoChave.value;
