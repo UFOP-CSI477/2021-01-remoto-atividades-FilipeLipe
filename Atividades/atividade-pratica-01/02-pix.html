@@ -7,42 +7,63 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
         </style>
+        <script src="02-pix.js"></script>
     </head>
     <body>
         <div>
-            <h1 id="visor">R$ 10.000,00</h1>>
+            <h1 id="visor">0</h1>
         </div>
         <div id="container">
-            <form>
+
+            <form action="post" name="formulario">
                 <div>
-                    <select id="Camposelect">
-                        <option value="valor1" selected>CPF</option>
-                        <option value="valor2">CNPJ</option>
-                        <option value="valor3">E - Mail</option>
-                        <option value="valor3">Numero de Telefone</option>
-                        <option value="valor3">Chave Aleatoria</option>
+                    <select id="tipoChave" title="Selecionar Chave" name="tipoChave" required>
+                        <option>Selecionar Chave</option>
+                        <option value="CPF" selected>CPF</option>
+                        <option value="CNPJ">CNPJ</option>
+                        <option value="E-Mail">E - Mail</option>
+                        <option value="Numero de Telefone">Numero de Telefone</option>
+                        <option value="Chave Aleatoria">Chave Aleatoria</option>
                     </select>
-                </div>
-                <div>
-                    <input type="text" class="CampoTexto" placeholder="Chave Pix">
-                </div>
-                <div>
-                    <input type="radio" id="contactChoice1" name="contact" value="enviar">
+                
+                    <input type="text" id="chave" class="CampoTexto" placeholder="Chave Pix">
+
+                    <br>
+                    <input type="radio" id="status" name="contact" value="SAIDA">
                     <label for="contactChoice1">Enviar</label>
                     <br>
-                    <input type="radio" id="contactChoice2" name="contact" value="receber">
+                    <input type="radio" id="status" name="contact" value="ENTRADA">
                     <label for="contactChoice2">Receber</label>
-                  </div>
-                  <div>
-                    <input type="text" class="CampoTexto" placeholder="Valor">
-                  </div>
-                  <div>
-                    <input type="date" class="CampoData">
-                  </div>
-                  <div>
-                    <input type="submit" id="botao">
-                  </div>
+                    <br>
+
+                    <input type="text" id="valor" class="CampoTexto" placeholder="Valor">
+                  
+                    <input type="date" id="data" >
+                  
+                    <input type="button" id="botao" onclick="finalizar()" value="Finalizar">   
+                </div>
             </form>
+
+
+
+        </div>
+        <div>
+            <table id="tabela">
+                <tr>
+                    <td id="marcador">
+                        
+                        <h1 id="status2">Entrada</h1>
+                    </td>
+                    <td id="transacao">
+                        
+                        <h1 id="valor2">Valor</h1>
+                        <h2 id="chave2">Chave pix: </h2>
+                        <h2 id="tipochave2">Tipo chave: </h2>
+                        <h2 id="data2">Data: </h2>
+                        
+                    </td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>
