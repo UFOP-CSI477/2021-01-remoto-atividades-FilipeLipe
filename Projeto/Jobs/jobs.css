@@ -1,0 +1,90 @@
+
+
+#logo{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 100px;
+}
+
+
+a:link{
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+a:hover{
+    color: #000000;
+}
+
+.AlinharTexto{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.LinhaMenu{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.MenuHover{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.MenuHover:hover{
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+.MenuHover2{
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+
+
+
+#Form{
+    margin-top: 200px;
+    background-color: #C4C4C4;
+    text-align: center;
+    width: 30%;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto; 
+    border-radius: 1rem;
+}
+
+input{
+    width: 90%;
+    margin-top: 1rem;
+    border-style: none;
+    border-radius: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+#Email{
+    height: 2.5rem;
+    margin-top: 3rem;
+    padding-left: 1.5rem;
+}
+
+#Senha{
+    height: 2.5rem;
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+#Botao{
+    width: 50%;
+    height: 2.5rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    font-weight:900;
+    font-size:larger;
+}
+
+#Cadastrar{
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
