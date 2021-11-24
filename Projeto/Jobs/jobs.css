@@ -6,10 +6,13 @@
     width: 100px;
 }
 
+a{
+    color: black;
+}
 
 a:link{
     text-decoration: none;
-    color: #000000;
+    color: inherit;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
 }
@@ -53,6 +56,9 @@ a:hover{
     margin-left: auto;
     margin-right: auto; 
     border-radius: 1rem;
+    position: absolute;
+    top: 13rem;
+    left: 33rem;
 }
 
 input{
@@ -87,4 +93,15 @@ input{
 #Cadastrar{
     padding-top: 0.5rem;
     padding-bottom: 1rem;
+}
+
+
+.Titulo{
+    font-size: 15rem;
+    font-weight:bolder;
+    color: #FFF;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black; 
+    padding-left: 20%;
+    margin: auto;
 }
