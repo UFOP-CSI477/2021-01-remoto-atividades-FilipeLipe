@@ -64,7 +64,7 @@ a:hover{
 
 
 #Titulo2{
-    padding-top: 5rem;
+    padding-top: 10rem;
     text-align: right;
     font-size: 10rem;
     font-weight:bolder;
@@ -86,12 +86,17 @@ a:hover{
 }
 
 #Botao{
-    width: 50%;
-    height: 2.5rem;
+    width: 18rem;
+    height: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background-color: #c4c4c4;
+    border: 0cm;
     border-radius: 2rem;
-    margin-top: 1rem;
+    margin-left: 40%;
+
     font-weight:900;
     font-size:larger;
-    margin-bottom: 2rem;
+    color: #fff;
 }
 

@@ -1,0 +1,175 @@
+
+
+#logo{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 100px;
+}
+
+a{
+    color: black;
+}
+
+a:link{
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+a:hover{
+    color: #000000;
+}
+
+.AlinharTexto{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.LinhaMenu{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.MenuHover{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.MenuHover:hover{
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+.MenuHover2{
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+
+
+
+#Form{
+    margin-top: 200px;
+    background-color: #C4C4C4;
+    text-align: center;
+    width: 30%;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto; 
+    border-radius: 1rem;
+    position: absolute;
+    top: 13rem;
+    left: 33rem;
+}
+
+input{
+    width: 90%;
+    margin-top: 1rem;
+    border-style: none;
+    border-radius: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+#Nome{
+    height: 2.5rem;
+    margin-top: 3rem;
+    padding-left: 1.5rem;
+}
+
+#Email{
+    height: 2.5rem;
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+#Senha{
+    height: 2.5rem;
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+#Botao{
+    width: 50%;
+    height: 2.5rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    font-weight:900;
+    font-size:larger;
+    margin-bottom: 2rem;
+}
+
+#Cadastrar{
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+
+.Titulo{
+    text-align: center;
+    font-size: 15rem;
+    font-weight:bolder;
+    color: #FFF;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    margin: auto;
+}
+
+
+/*RADIO*/
+#input-option356 {
+    list-style: none;
+    margin-top: 1rem;
+    margin-left: 14rem;
+    padding: 0;
+    
+  }
+  
+  .input-option356:after {
+    content: "";
+    clear: both;
+  }
+  
+  .radio {
+    border: 1px solid;
+    border-radius: 5rem;
+    box-sizing: border-box;
+    float: left;
+    height: 40px;
+    position: relative;
+    width: 120px;
+
+  }
+  
+  .radio + .radio {
+    margin-left: 25px;
+  }
+  
+  .radio label {
+    border-radius: 5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+  }
+  
+  .radio label span {
+    z-index: 1;
+  }
+  .radio label input[type=radio] {
+    all: unset;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .radio label input[type=radio]:checked {
+    background-color: #efefef;
+    border-radius: 5rem;
+  }
+  .radio label input[type=radio]:checked + span{
+    color: #000;
+  }
