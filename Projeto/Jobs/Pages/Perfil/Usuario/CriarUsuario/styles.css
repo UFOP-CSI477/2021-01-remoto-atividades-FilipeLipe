@@ -42,7 +42,7 @@ a:hover{
 
 #Titulo{
     padding-top: 5rem;
-    text-align: center;
+    text-align: left;
     font-size: 12rem;
     font-weight:bolder;
     color: black;
@@ -53,8 +53,7 @@ a:hover{
 
 #Titulo2{
     padding-top: 2rem;
-    padding-left: 6rem;
-    text-align: center;
+    text-align: left;
     font-size: 13.8rem;
     font-weight:bolder;
     color: #FFF;
