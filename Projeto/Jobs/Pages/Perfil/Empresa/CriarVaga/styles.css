@@ -1,0 +1,81 @@
+
+/*NavBar*/
+#logo{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 100px;
+}
+a{
+    color: black;
+}
+a:link{
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+a:hover{
+    color: #000000;
+}
+.AlinharTexto{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.LinhaMenu{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.MenuHover{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.MenuHover:hover{
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+.MenuHover2{
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+
+#Titulo{
+    padding-top: 5rem;
+    text-align: center;
+    font-size: 12rem;
+    font-weight:bolder;
+    color: black;
+    margin: auto;
+    line-height: 8rem;
+}
+
+
+#Titulo2{
+    padding-top: 2rem;
+    padding-left: 6rem;
+    text-align: center;
+    font-size: 13.8rem;
+    font-weight:bolder;
+    color: #FFF;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    margin: auto;
+    line-height: 8rem;
+}
+
+#Botao{
+    width: 18rem;
+    height: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background-color: #c4c4c4;
+    border: 0cm;
+    border-radius: 2rem;
+    margin-left: 40%;
+
+    font-weight:900;
+    font-size:larger;
+    color: #fff;
+}
+
