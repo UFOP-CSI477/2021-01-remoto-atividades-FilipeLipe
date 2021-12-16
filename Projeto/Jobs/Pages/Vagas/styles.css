@@ -45,66 +45,8 @@ a:hover{
 }
 
 
-
-
-#Form{
-    margin-top: 200px;
-    background-color: #C4C4C4;
-    text-align: center;
-    width: 30%;
-    align-content: center;
-    margin-left: auto;
-    margin-right: auto; 
-    border-radius: 1rem;
-    position: absolute;
-    top: 13rem;
-    left: 33rem;
-}
-
-input{
-    width: 90%;
-    margin-top: 1rem;
-    border-style: none;
-    border-radius: 0.5rem;
-    font-family: 'Roboto', sans-serif;
-}
-
-#Nome{
-    height: 2.5rem;
-    margin-top: 3rem;
-    padding-left: 1.5rem;
-}
-
-#Email{
-    height: 2.5rem;
-    margin-top: 0.5rem;
-    padding-left: 1.5rem;
-}
-
-#Senha{
-    height: 2.5rem;
-    margin-top: 0.5rem;
-    padding-left: 1.5rem;
-}
-
-#Botao{
-    width: 50%;
-    height: 2.5rem;
-    border-radius: 2rem;
-    margin-top: 1rem;
-    font-weight:900;
-    font-size:larger;
-    margin-bottom: 2rem;
-}
-
-#Cadastrar{
-    padding-top: 0.5rem;
-    padding-bottom: 1rem;
-}
-
-
 .Titulo{
-    text-align: center;
+    text-align: right;
     font-size: 15rem;
     font-weight:bolder;
     color: #FFF;
@@ -113,63 +55,56 @@ input{
     margin: auto;
 }
 
+.red{
+    background-color: red;
+}
 
-/*RADIO*/
-#input-option356 {
-    list-style: none;
-    margin-top: 1rem;
-    margin-left: 14rem;
-    padding: 0;
-    
-  }
-  
-  .input-option356:after {
-    content: "";
-    clear: both;
-  }
-  
-  .radio {
-    border: 1px solid;
-    border-radius: 5rem;
-    box-sizing: border-box;
-    float: left;
-    height: 40px;
-    position: relative;
-    width: 120px;
+.blue{
+    background-color: blue;
+}
 
-  }
-  
-  .radio + .radio {
-    margin-left: 25px;
-  }
-  
-  .radio label {
-    border-radius: 5rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.green{
+    background-color: green;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.black{
+    background-color: black;
+}
+
+#Elemento{
+    margin-top: 200px;
+    background-color: #F5F5F5;
+    text-align: center;
+    width: 80%;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto; 
+    border-radius: 1rem;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    white-space: nowrap;
-  }
-  
-  .radio label span {
-    z-index: 1;
-  }
-  .radio label input[type=radio] {
-    all: unset;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-  .radio label input[type=radio]:checked {
-    background-color: #efefef;
-    border-radius: 5rem;
-  }
-  .radio label input[type=radio]:checked + span{
-    color: #000;
-  }
+    top: 13rem;
+    left: 9.5rem;
+}
+
+h2{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: right;
+    font-size: 30rem;
+    font-weight:900;
+    color: black;
+    margin: auto;
+}
+
+h5{
+    padding-top: 2rem;
+}
+
+p.Descricao{
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 1rem;
+}
