@@ -55,31 +55,34 @@
         </div>
 
         <div class="container">
-            <form action="">
-                <div id="Form">
-                
+            
+            <div id="Form">
+                <Form action="POST" name="FormLogin">
                     <div class="row d-flex justify-content-center" >
                         <div class="col">
-                            <input type="text" id="Email" placeholder="Email">
+                            <input type="text" name="Email" id="Email" placeholder="Email">
                         </div>
                     </div>
                     <div class="row justify-content-md-center">
                         <div class="col">
-                            <input type="text" id="Senha" placeholder="Senha">
+                            <input type="text" name="Senha" id="Senha" placeholder="Senha">
                         </div>
                     </div>
-                    <div class="row justify-content-md-center">
-                        <div class="col">
-                            <input type="submit" id="Botao">
-                        </div>
-                    </div>
-                    <div class="row justify-content-md-center">
-                        <div class="col" id="Cadastrar">
-                            <a href="../Perfil/Usuario/CriarUsuario/index.html" > Cadastrar</a>
-                        </div>
+                    
+                </form>
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <button onclick="CarregarDadosForm()" id="Botao">Entrar</button>
                     </div>
                 </div>
-            </form>
+                <div class="row justify-content-md-center">
+                    <div class="col" id="Cadastrar">
+                        <a href="../Perfil/Usuario/CriarUsuario/index.html" > Cadastrar</a>
+                    </div>
+                </div>
+            </div>
+            
+            
         </div>
 
     </body>
