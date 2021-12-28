@@ -10,7 +10,8 @@
     
     <?php
 
-        echo "Ola Mundo !!";
+        $user = "Filipe";
+        echo "Ola Mundo !! Eu me chamo $user";
 
     ?>
 
