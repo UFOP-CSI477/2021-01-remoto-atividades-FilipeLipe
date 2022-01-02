@@ -9,11 +9,11 @@
 <body>
     
     <?php
-
+        phpinfo();
         $user = "Filipe";
         echo "Ola Mundo !! Eu me chamo $user";
 
-    ?>
+    ?>  
 
 </body>
 </html>
