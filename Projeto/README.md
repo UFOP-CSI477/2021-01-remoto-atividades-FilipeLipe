@@ -33,10 +33,6 @@
 
   Paginas: Login, Cadastro, Home, Usuários, Vagas, Criar Curriculo, Criar Vaga, Cadastro Usuários(A mesma para editar), Cadastro Vaga(A mesma para editar), Perfil do Usuário e Perfil da Vaga.
 O link para acessar é: https://www.figma.com/file/zm7veBu2O1x8UKL7jl7JXm/WEB?node-id=0%3A1  
-
-# **CSI606-2021-01 - Remoto - Trabalho Final - Resultados**
-## *Aluna(o): Princesa Leia (Luke Skywalker)*
-
 --------------
 
 <!-- Este documento tem como objetivo apresentar o projeto desenvolvido, considerando o que foi definido na proposta e o produto final. -->
