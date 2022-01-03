@@ -30,19 +30,19 @@ Para que consiga rodar perfeitamente o meu codigo, você deve ter instalado em s
 <!-- Descrever o que deve ser feito para instalar (ou baixar) a aplicação, o que precisa ser configurando (parâmetros, banco de dados e afins) e como executá-la. -->
 
 ### 6. Referências
-SALLES, Rodrigo(CD6 Desenvolvimento de Pessoas e Negócios). Instalação e configuração do Xampp. Youtube.
-Disponivel em: 02/01/2022. 
-SALLES, Rodrigo(CD6 Desenvolvimento de Pessoas e Negócios). Criando um banco de dados com o Xampp. Youtube.
-Disponivel em: 02/01/2022. 
-SALLES, Rodrigo(CD6 Desenvolvimento de Pessoas e Negócios). Criando uma conexão php com banco de dados - Xampp. Youtube.
-Disponivel em: 02/01/2022. 
-SALLES, Rodrigo(CD6 Desenvolvimento de Pessoas e Negócios). PHP MySql - Gravando dados no banco utilizando o xampp. Youtube.
-Disponivel em: 02/01/2022. 
-SALLES, Rodrigo(CD6 Desenvolvimento de Pessoas e Negócios). Listagem de dados PHP - MySql. Youtube.
-Disponivel em: 02/01/2022. 
-SALLES, Rodrigo(CD6 Desenvolvimento de Pessoas e Negócios). Excluindo dados com PHP - MySql utilizando o Xammp. Youtube.
-Disponivel em: 02/01/2022. 
-SALLES, Rodrigo(CD6 Desenvolvimento de Pessoas e Negócios). Editando dados no PHP MySql - Xammp. Youtube.
-Disponivel em: 02/01/2022. 
+SALLES, Rodrigo(CD6 Desenvolvimento de Pessoas e Negócios). Instalação e configuração do Xampp. Youtube.<br />
+Disponivel em: 02/01/2022.<br /><br />
+SALLES, Rodrigo(CD6 Desenvolvimento de Pessoas e Negócios). Criando um banco de dados com o Xampp. Youtube.<br />
+Disponivel em: 02/01/2022. <br /><br />
+SALLES, Rodrigo(CD6 Desenvolvimento de Pessoas e Negócios). Criando uma conexão php com banco de dados - Xampp. Youtube.<br />
+Disponivel em: 02/01/2022. <br /><br />
+SALLES, Rodrigo(CD6 Desenvolvimento de Pessoas e Negócios). PHP MySql - Gravando dados no banco utilizando o xampp. Youtube.<br />
+Disponivel em: 02/01/2022. <br /><br />
+SALLES, Rodrigo(CD6 Desenvolvimento de Pessoas e Negócios). Listagem de dados PHP - MySql. Youtube.<br />
+Disponivel em: 02/01/2022. <br /><br />
+SALLES, Rodrigo(CD6 Desenvolvimento de Pessoas e Negócios). Excluindo dados com PHP - MySql utilizando o Xammp. Youtube.<br />
+Disponivel em: 02/01/2022. <br /><br />
+SALLES, Rodrigo(CD6 Desenvolvimento de Pessoas e Negócios). Editando dados no PHP MySql - Xammp. Youtube.<br />
+Disponivel em: 02/01/2022.
 <!-- Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT. -->
 
