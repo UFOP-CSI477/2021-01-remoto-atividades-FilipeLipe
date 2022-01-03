@@ -80,7 +80,7 @@ a:hover{
 
 
 #Elemento{
-    margin-top: 200px;
+    margin-top: 20px;
     background-color: #F5F5F5;
     text-align: center;
     width: 80%;
@@ -89,7 +89,7 @@ a:hover{
     margin-right: auto; 
     border-radius: 1rem;
     position: absolute;
-    top: 35rem;
+    top: 5rem;
     left: 9.5rem;
 }
 

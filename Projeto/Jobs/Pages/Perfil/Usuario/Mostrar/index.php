@@ -51,28 +51,31 @@
         </div>
 
         <?php 
+        session_start();
         include("../../../../Componentes/conexao.php");        
         
         $select = mysqli_query($conexao,"select * from pessoas order by id desc");
         
-        while($linha=mysqli_fetch_array($select)){
+        while($linha=mysqli_fetch_assoc($select)){
             $ID = $linha['ID'];
-            $nome = $linha['Nome'];
-            $descricao = $linha['Descricao'];
-            $perfil = $linha['Perfil'];
-            $idade = $linha['Idade'];
-            $sexo = $linha['Sexo'];
-            $curso = $linha['Curso'];
-            $faculdade = $linha['Faculdade'];
-            $periodo = $linha['Periodo'];
-            $tempo = $linha['Tempo'];
-            $empresa = $linha['Empresa'];
-            $cargo = $linha['Cargo'];
-            $ramo = $linha['Ramo'];
-            $tempoTrabalho = $linha['TempoTrabalho'];
-            $telefone = $linha['Telefone'];
-            $adicionais = $linha['Adicionais'];
-            ?>
+            if($_SESSION['id'] == $ID){
+                $ID = $linha['ID'];
+                $nome = $linha['Nome'];
+                $descricao = $linha['Descricao'];
+                $perfil = $linha['Perfil'];
+                $idade = $linha['Idade'];
+                $sexo = $linha['Sexo'];
+                $curso = $linha['Curso'];
+                $faculdade = $linha['Faculdade'];
+                $periodo = $linha['Periodo'];
+                $tempo = $linha['Tempo'];
+                $empresa = $linha['Empresa'];
+                $cargo = $linha['Cargo'];
+                $ramo = $linha['Ramo'];
+                $tempoTrabalho = $linha['TempoTrabalho'];
+                $telefone = $linha['Telefone'];
+                $adicionais = $linha['Adicionais'];
+                ?>
             <div class="container">
                 <h1 id="Titulo"><?=$nome?></h1>
             </div>
@@ -207,7 +210,7 @@
                 </div>
 
             </div>
-        <?php } ?>
+        <?php }} ?>
 
     </body>
 </html>

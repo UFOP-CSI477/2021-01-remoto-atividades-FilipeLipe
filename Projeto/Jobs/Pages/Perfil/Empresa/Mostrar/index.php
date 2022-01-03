@@ -49,59 +49,91 @@
                 <div class="col-1"></div>
             </div>
         </div>
-
-        <div class="container">
-            <h1 id="Titulo">CRIAR</h1>
-        </div>
-
-        <div class="container">
-            <h1 id="Titulo2">VAGA</h1>
-        </div>
+        <?php 
+        session_start();
+        include("../../../../Componentes/conexao.php");        
         
-        <div class="row justify-content-md-center">
-            <div class="col">
-                <button onclick="window.location.href = '../Cadastrar/index.html'" id="Botao">Criar Vaga</button>
-            </div>
+        $select = mysqli_query($conexao,"select * from empresa order by id desc");
+        
+        while($linha=mysqli_fetch_assoc($select)){
+            $ID = $linha['ID'];
+            if($_SESSION['id'] == $ID){
+                $nome = $linha['Nome'];
+                $descricao = $linha['Descricao'];
+                $salario = $linha['Salario'];
+                $horas = $linha['Horas'];
+                $empresa = $linha['Empresa'];
+                $requisitos = $linha['Requisitos'];
+                $beneficios = $linha['Beneficios'];
+            
+                ?>
+
+        <div class="container">
+            <h1 id="Titulo"><?=$nome?></h1>
         </div>
 
-        <div id="Elemento" onclick="window.location.href = '../Mostrar/index.html'">
+        <div id="Form">
+            
+            <div class="row">
+                <p class="Descricao"><?=$descricao?></p>
+            </div>
 
             <div class="row">
+                <div class="col"></div>
                 <div class="col">
-                    <h2>UX / UI</h2>   
+                    <h5>Salario</h5>
                 </div>
                 <div class="col">
-                    <div class="row">
-                        <h5>Salario</h5>
-                    </div>
-                    <div class="row">
-                        <p>R$10.000,00</p>
-                    </div>
+                    <h5>Horas</h5>
                 </div>
                 <div class="col">
-                    <div class="row">
-                        <h5>Horas</h5>
-                    </div>
-                    <div class="row">
-                        <p>40hrs</p>
-                    </div>
+                    <h5>Empresa</h5>
+                </div>
+                <div class="col"></div>
+            </div>
+
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <p><?=$salario?></p>
                 </div>
                 <div class="col">
-                    <div class="row">
-                        <h5>Empresa</h5>
-                    </div>
-                    <div class="row">
-                        <p>Alfas</p>
-                    </div>
+                    <p><?=$horas?></p>
+                </div>
+                <div class="col">
+                    <p><?=$empresa?></p>
+                </div>
+                <div class="col"></div>
+            </div>
+            
+            <div class="row justify-content-md-center">
+                <div class="col">
+                    <h1>Requisitos</h1>
                 </div>
             </div>
+
             <div class="row">
-                <p class="Descricao">
-                    Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
-                </p>
+                <p class="Requisitos"><?=$requisitos?></p>
+            </div>
+
+            <div class="row justify-content-md-center">
+                <div class="col">
+                    <h1>Benefícios</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <p class="Beneficios"><?=$beneficios?></p>
+            </div>
+
+            <div class="row justify-content-md-center">
+                <div class="col">
+                    <button onclick="window.location.href = '../Cadastrar/index.html'" id="Botao">Editar</button>
+                </div>
             </div>
 
         </div>
+        <?php }} ?>
 
     </body>
 </html>
