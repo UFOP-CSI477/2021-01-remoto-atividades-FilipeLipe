@@ -54,13 +54,36 @@
             <h1 class="Titulo">USUÁRIOS</h1>
         </div>
 
-        <div class="container">
-            <div action="">
+        <?php 
+        include("../../Componentes/conexao.php");        
+        
+        $select = mysqli_query($conexao,"select * from pessoas order by id desc");
+        
+        while($linha=mysqli_fetch_array($select)){
+            $ID = $linha['ID'];
+            $nome = $linha['Nome'];
+            $descricao = $linha['Descricao'];
+            $perfil = $linha['Perfil'];
+            $idade = $linha['Idade'];
+            $sexo = $linha['Sexo'];
+            $curso = $linha['Curso'];
+            $faculdade = $linha['Faculdade'];
+            $periodo = $linha['Periodo'];
+            $tempo = $linha['Tempo'];
+            $empresa = $linha['Empresa'];
+            $cargo = $linha['Cargo'];
+            $ramo = $linha['Ramo'];
+            $tempoTrabalho = $linha['TempoTrabalho'];
+            $telefone = $linha['Telefone'];
+            $adicionais = $linha['Adicionais'];
+            ?>
+            <div class="container" onclick="window.location.href = '../Perfil/Usuario/Mostrar/index.php'">
+                
                 <div id="Elemento">
 
                     <div class="row">
                         <div class="col-4">
-                            <h2>Filipe Nunes</h2>   
+                            <h2><?=$nome?></h2>   
                         </div>
                         <div class="col"></div>
                         <div class="col">
@@ -68,7 +91,7 @@
                                 <h5>Perfil</h5>
                             </div>
                             <div class="row">
-                                <p>Inovador</p>
+                                <p><?=$perfil?></p>
                             </div>
                         </div>
                         <div class="col">
@@ -76,7 +99,7 @@
                                 <h5>Idade</h5>
                             </div>
                             <div class="row">
-                                <p>21</p>
+                                <p><?=$idade?></p>
                             </div>
                         </div>
                         <div class="col">
@@ -84,20 +107,18 @@
                                 <h5>Sexo</h5>
                             </div>
                             <div class="row">
-                                <p>Masculino</p>
+                                <p><?=$sexo?></p>
                             </div>
                         </div>
                         <div class="col"></div>
                     </div>
                     <div class="row">
-                        <p class="Descricao">
-                            Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
-                        </p>
+                        <p class="Descricao"><?=$descricao?></p>
                     </div>
 
                 </div>
+                
             </div>
-        </div>
-
+        <?php } ?>
     </body>
 </html>

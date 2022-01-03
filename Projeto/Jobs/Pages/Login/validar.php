@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     include("../../Componentes/conexao.php");
 
     $email = $_POST['email'];
@@ -10,6 +10,8 @@
     
     while($linha=mysqli_fetch_array($select)){
         if($linha["Email"] == $email && $linha["Senha"] == $password){
+            $id = $linha["ID"];
+            $_SESSION['id'] = $id;
             if($linha["Tipo"] == 1){
                 header("location:http://localhost/2021-01-remoto-atividades-FilipeLipe/projeto/jobs/pages/perfil/empresa/criarvaga/index.php"); 
             }else{

@@ -55,125 +55,127 @@
         </div>
 
         <div id="Form">
-            <!--Informações-->        
-            <div class="row d-flex justify-content-center" >
-                <div class="col">
-                    <input type="text" id="Nome" class="CampoText" placeholder="Nome">
+            <form action="validar.php" method="post">
+                <!--Informações-->        
+                <div class="row d-flex justify-content-center" >
+                    <div class="col">
+                        <input type="text" name="nome" id="Nome" class="CampoText" placeholder="Nome">
+                    </div>
                 </div>
-            </div>
-            <div class="row d-flex justify-content-center" >
-                <div class="col">
-                    <textarea name="Descricao" id="Descricao" class="CampoText" placeholder="Descrição" cols="30" rows="10"></textarea>
+                <div class="row d-flex justify-content-center" >
+                    <div class="col">
+                        <textarea name="descricao" id="Descricao" class="CampoText" placeholder="Descrição" cols="30" rows="10"></textarea>
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <input type="text" id="Perfil" class="CampoText" placeholder="Perfil">
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="perfil" id="Perfil" class="CampoText" placeholder="Perfil">
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <p>O Perfil pode ser encontrado aqui: https://www.16personalities.com/br/teste-de-personalidade</p>
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <p>O Perfil pode ser encontrado aqui: https://www.16personalities.com/br/teste-de-personalidade</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <input type="text" id="Idade" class="CampoText" placeholder="Idade">
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="idade" id="Idade" class="CampoText" placeholder="Idade">
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <input type="text" id="Sexo" class="CampoText" placeholder="Sexo">
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="sexo" id="Sexo" class="CampoText" placeholder="Sexo">
+                    </div>
                 </div>
-            </div>
 
-            <!--Requisitos--> 
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <h1>Formação</h1>
+                <!--Requisitos--> 
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <h1>Formação</h1>
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <input type="text" id="Curso" class="CampoText" placeholder="Curso">
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="curso" id="Curso" class="CampoText" placeholder="Curso">
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <input type="text" id="Universidade" class="CampoText" placeholder="Universidade">
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="faculdade" id="Universidade" class="CampoText" placeholder="Universidade">
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <input type="text" id="Periodo" class="CampoText" placeholder="Periodo">
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="periodo" id="Periodo" class="CampoText" placeholder="Periodo">
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <input type="text" id="Tempo" class="CampoText" placeholder="Tempo (Ano inicio - Ano conclusão)">
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="tempo" id="Tempo" class="CampoText" placeholder="Tempo (Ano inicio - Ano conclusão)">
+                    </div>
                 </div>
-            </div>
-            <!--Beneficios--> 
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <h1>Experiencias</h1>
+                <!--Beneficios--> 
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <h1>Experiencias</h1>
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <input type="text" id="Empresa" class="CampoText" placeholder="Empresa">
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="empresa" id="Empresa" class="CampoText" placeholder="Empresa">
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <input type="text" id="Cargo" class="CampoText" placeholder="Cargo">
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="cargo" id="Cargo" class="CampoText" placeholder="Cargo">
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <input type="text" id="RamoEmpresa" class="CampoText" placeholder="Ramo Empresa">
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="ramo" id="RamoEmpresa" class="CampoText" placeholder="Ramo Empresa">
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <input type="text" id="TempoTrabalho" class="CampoText" placeholder="Tempo de Trabalho">
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="tempoTrabalho" id="TempoTrabalho" class="CampoText" placeholder="Tempo de Trabalho">
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <input type="text" id="Telefone" class="CampoText" placeholder="Telefone">
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="telefone" id="Telefone" class="CampoText" placeholder="Telefone">
+                    </div>
                 </div>
-            </div>
 
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <h1>Portfólio</h1>
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <h1>Portfólio</h1>
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <input type="text" id="Link" class="CampoText" placeholder="Link do drive">
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" id="Link" class="CampoText" placeholder="Link do drive">
+                    </div>
                 </div>
-            </div>
 
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <h1>Adicionais</h1>
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <h1>Adicionais</h1>
+                    </div>
                 </div>
-            </div>
-            <div class="row d-flex justify-content-center" >
-                <div class="col">
-                    <textarea name="Descricao" id="Descricao" class="CampoText" placeholder="Descrição" cols="30" rows="10"></textarea>
+                <div class="row d-flex justify-content-center" >
+                    <div class="col">
+                        <textarea name="adicionais" id="Descricao" class="CampoText" placeholder="Descrição" cols="30" rows="10"></textarea>
+                    </div>
                 </div>
-            </div>
-            <!--Botao--> 
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <button onclick="window.location.href = '../CriarUsuario/index.html'" id="Botao">Salvar</button>
+                <!--Botao--> 
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="submit" id="Botao" value="Salvar"></input>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
-    </form>
+    
 
     </body>
 </html>
