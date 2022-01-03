@@ -37,7 +37,7 @@
                     <a href="#">Usuários</a> 
                 </div>
                 <div class="col-1 MenuHover AlinharTexto">
-                    <a href="../Vagas/index.html">Vagas</a> 
+                    <a href="../Vagas/index.php">Vagas</a> 
                 </div>
                 <div class="col-5 LinhaMenu"></div>
                 <div class="col-1 MenuHover AlinharTexto">
@@ -59,24 +59,14 @@
         
         $select = mysqli_query($conexao,"select * from pessoas order by id desc");
         
-        while($linha=mysqli_fetch_array($select)){
-            $ID = $linha['ID'];
+        while($linha=mysqli_fetch_assoc($select)){
+            
             $nome = $linha['Nome'];
             $descricao = $linha['Descricao'];
             $perfil = $linha['Perfil'];
             $idade = $linha['Idade'];
             $sexo = $linha['Sexo'];
-            $curso = $linha['Curso'];
-            $faculdade = $linha['Faculdade'];
-            $periodo = $linha['Periodo'];
-            $tempo = $linha['Tempo'];
-            $empresa = $linha['Empresa'];
-            $cargo = $linha['Cargo'];
-            $ramo = $linha['Ramo'];
-            $tempoTrabalho = $linha['TempoTrabalho'];
-            $telefone = $linha['Telefone'];
-            $adicionais = $linha['Adicionais'];
-            ?>
+        ?>
             <div class="container" onclick="window.location.href = '../Perfil/Usuario/Mostrar/index.php'">
                 
                 <div id="Elemento">

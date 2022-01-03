@@ -34,14 +34,14 @@
                     <a href="../../../Home/index.html">Home</a>
                 </div>
                 <div class="col-1 MenuHover AlinharTexto">
-                    <a href="../../../Usuarios/index.html">Usuários</a> 
+                    <a href="../../../Usuarios/index.php">Usuários</a> 
                 </div>
                 <div class="col-1 MenuHover AlinharTexto">
-                    <a href="../../../Vagas/index.html">Vagas</a> 
+                    <a href="../../../Vagas/index.php">Vagas</a> 
                 </div>
                 <div class="col-5 LinhaMenu"></div>
                 <div class="col-1 MenuHover AlinharTexto">
-                    <a href="../../../Cadastro/index.html">Cadastro</a> 
+                    <a href="../../../Login/index.html">Logout</a> 
                 </div>
                 <div class="col-1 MenuHover2 AlinharTexto">
                     <a href="#">Perfil</a> 

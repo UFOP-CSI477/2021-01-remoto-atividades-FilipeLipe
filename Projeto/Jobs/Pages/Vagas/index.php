@@ -34,7 +34,7 @@
                     <a href="../Home/index.html">Home</a>
                 </div>
                 <div class="col-1 MenuHover AlinharTexto">
-                    <a href="../Usuarios/index.html">Usuários</a> 
+                    <a href="../Usuarios/index.php">Usuários</a> 
                 </div>
                 <div class="col-1 MenuHover2 AlinharTexto">
                     <a href="#">Vagas</a> 
@@ -44,7 +44,7 @@
                     <a href="../Cadastro/index.html">Cadastro</a> 
                 </div>
                 <div class="col-1 MenuHover AlinharTexto">
-                    <a href="#">Login</a> 
+                    <a href="../Login/index.html">Login</a> 
                 </div>
                 <div class="col-1"></div>
             </div>
@@ -53,21 +53,36 @@
         <div class="container">
             <h1 class="Titulo">VAGAS</h1>
         </div>
-
+        <?php 
+        session_start();
+        include("../../Componentes/conexao.php");        
+        
+        $select = mysqli_query($conexao,"select * from empresa order by id desc");
+        
+        while($linha=mysqli_fetch_assoc($select)){
+            
+            $nome = $linha['Nome'];
+            $descricao = $linha['Descricao'];
+            $salario = $linha['Salario'];
+            $horas = $linha['Horas'];
+            $empresa = $linha['Empresa'];
+            
+        ?>
         <div class="container">
             <div action="">
                 <div id="Elemento">
 
                     <div class="row">
-                        <div class="col">
-                            <h2>UX / UI</h2>   
+                        <div class="col-4">
+                            <h2><?=$nome?></h2>   
                         </div>
+                        <div class="col"></div>
                         <div class="col">
                             <div class="row">
                                 <h5>Salario</h5>
                             </div>
                             <div class="row">
-                                <p>R$10.000,00</p>
+                                <p><?=$salario?></p>
                             </div>
                         </div>
                         <div class="col">
@@ -75,7 +90,7 @@
                                 <h5>Horas</h5>
                             </div>
                             <div class="row">
-                                <p>40hrs</p>
+                                <p><?=$horas?></p>
                             </div>
                         </div>
                         <div class="col">
@@ -83,19 +98,18 @@
                                 <h5>Empresa</h5>
                             </div>
                             <div class="row">
-                                <p>Alfas</p>
+                                <p><?=$empresa?></p>
                             </div>
                         </div>
+                        <div class="col"></div>
                     </div>
                     <div class="row">
-                        <p class="Descricao">
-                            Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
-                        </p>
+                        <p class="Descricao"><?=$descricao?></p>
                     </div>
 
                 </div>
             </div>
         </div>
-
+        <?php }?>
     </body>
 </html>
