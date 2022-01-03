@@ -5,10 +5,6 @@
 
 <!-- Este documento tem como objetivo apresentar o projeto desenvolvido, considerando o que foi definido na proposta e o produto final. -->
 
-### Resumo
-
-  (Apresentar um breve resumo sobre o seu trabalho, indicando o contexto e as principais funcionalidades.)
-
 ### 1. Funcionalidades implementadas
 Foram implementadas paginas onde podemos vizualizar vagas disponiveis, alem de usuarios com seus curriculos. Alem de o usuario poder cadastrar o proprio curriculo, e caso deseja alteralo, pode faze-lo facilmente.
 <!-- Descrever as funcionalidades que eram previstas e foram implementas. -->
