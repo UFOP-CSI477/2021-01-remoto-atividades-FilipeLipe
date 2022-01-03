@@ -1,7 +1,5 @@
 <?php
 
-    //echo "POST";
-    //var_dump($_POST);
     include("../../Componentes/conexao.php");
 
     $nome = $_POST['nome'];

@@ -14,7 +14,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <script src="./jobs.js"></script>
     </head>
 
     <body>
@@ -57,27 +56,28 @@
         <div class="container">
             
             <div id="Form">
-                <Form action="POST" name="FormLogin">
+                <Form action="validar.php" method="post" name="FormLogin">
                     <div class="row d-flex justify-content-center" >
                         <div class="col">
-                            <input type="text" name="Email" id="Email" placeholder="Email">
+                            <input type="text" name="email" id="Email" placeholder="Email">
                         </div>
                     </div>
                     <div class="row justify-content-md-center">
                         <div class="col">
-                            <input type="text" name="Senha" id="Senha" placeholder="Senha">
+                            <input type="text" name="senha" id="Senha" placeholder="Senha">
                         </div>
                     </div>
-                    
-                </form>
-                <div class="row justify-content-md-center">
-                    <div class="col">
-                        <button onclick="CarregarDadosForm()" id="Botao">Entrar</button>
+                    <div class="row justify-content-md-center">
+                        <div class="col">
+                            <input type="submit" id="Botao" value="Entrar"></input>
+                        </div>
                     </div>
-                </div>
+                </form>
+
+                
                 <div class="row justify-content-md-center">
                     <div class="col" id="Cadastrar">
-                        <a href="../Perfil/Usuario/CriarUsuario/index.html" > Cadastrar</a>
+                        <a href="../Cadastro/index.html" > Cadastrar</a>
                     </div>
                 </div>
             </div>
