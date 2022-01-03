@@ -50,6 +50,10 @@
             </div>
         </div>
 
+        <div class="container">
+            <h1 id="Titulo">USUARIOS</h1>
+        </div>
+
         <?php 
         session_start();
         include("../../../../Componentes/conexao.php");        
@@ -76,141 +80,127 @@
                 $telefone = $linha['Telefone'];
                 $adicionais = $linha['Adicionais'];
                 ?>
-            <div class="container">
-                <h1 id="Titulo"><?=$nome?></h1>
-            </div>
-
-            <div id="Form">
-                
-                <div class="row">
-                    <p class="Descricao"><?=$descricao?></p>
+        <div id="Form">
+            <form action="update.php" method="post">
+                <!--Informações-->        
+                <div class="row d-flex justify-content-center" >
+                    <div class="col">
+                        <input type="text" name="nome" id="Nome" class="CampoText" placeholder="Nome" value="<?=$nome?>">
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center" >
+                    <div class="col">
+                        <input type="text" name="descricao" id="Descricao" class="CampoText" placeholder="Descrição" value="<?=$descricao?>">
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="perfil" id="Perfil" class="CampoText" placeholder="Perfil" value="<?=$perfil?>">
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <p>O Perfil pode ser encontrado aqui: https://www.16personalities.com/br/teste-de-personalidade</p>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="idade" id="Idade" class="CampoText" placeholder="Idade" value="<?=$idade?>">
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="sexo" id="Sexo" class="CampoText" placeholder="Sexo" value="<?=$sexo?>">
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col"></div>
-                    <div class="col">
-                        <h5>Perfil</h5>
-                    </div>
-                    <div class="col">
-                        <h5>Idade</h5>
-                    </div>
-                    <div class="col">
-                        <h5>Sexo</h5>
-                    </div>
-                    <div class="col"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col"></div>
-                    <div class="col">
-                        <p><?=$perfil?></p>
-                    </div>
-                    <div class="col">
-                        <p><?=$idade?></p>
-                    </div>
-                    <div class="col">
-                        <p><?=$sexo?></p>
-                    </div>
-                    <div class="col"></div>
-                </div>
-                
+                <!--Requisitos--> 
                 <div class="row justify-content-md-center">
                     <div class="col">
                         <h1>Formação</h1>
                     </div>
                 </div>
-
-                <div class="row">
-                    <h2 class="Requisitos">
-                        <?=$curso?>
-                    </h2>
-                </div>
-                <div class="row">
-                    <p class="Requisitos">
-                        <?=$faculdade?>
-                    </p>
-                </div>
-                <div class="row">
-                    <p class="Requisitos">
-                        <?=$periodo."º Periiodo"?>
-                    </p>
-                </div>
-                <div class="row">
-                    <p class="Requisitos">
-                        <?=$tempo?>
-                    </p>
-                </div>
-
                 <div class="row justify-content-md-center">
                     <div class="col">
-                        <h1>Experiecia</h1>
+                        <input type="text" name="curso" id="Curso" class="CampoText" placeholder="Curso" value="<?=$curso?>">
                     </div>
                 </div>
-
-                <div class="row">
-                    <h2 class="Requisitos">
-                        <?=$empresa?>
-                    </h2>
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="faculdade" id="Universidade" class="CampoText" placeholder="Universidade" value="<?=$faculdade?>">
+                    </div>
                 </div>
-                <div class="row">
-                    <p class="Requisitos">
-                        <?=$cargo?>
-                    </p>
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="periodo" id="Periodo" class="CampoText" placeholder="Periodo" value="<?=$periodo?>">
+                    </div>
                 </div>
-                <div class="row">
-                    <p class="Requisitos">
-                        <?=$ramo?>
-                    </p>
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="tempo" id="Tempo" class="CampoText" placeholder="Tempo (Ano inicio - Ano conclusão)" value="<?=$tempo?>">
+                    </div>
                 </div>
-                <div class="row">
-                    <p class="Requisitos">
-                        <?=$tempoTrabalho?>
-                    </p>
+                <!--Beneficios--> 
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <h1>Experiencias</h1>
+                    </div>
                 </div>
-                <div class="row">
-                    <p class="Requisitos">
-                        <?=$telefone?> 
-                    </p>
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="empresa" id="Empresa" class="CampoText" placeholder="Empresa" value="<?=$empresa?>">
+                    </div>
                 </div>
-
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="cargo" id="Cargo" class="CampoText" placeholder="Cargo" value="<?=$cargo?>">
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="ramo" id="RamoEmpresa" class="CampoText" placeholder="Ramo Empresa" value="<?=$ramo?>">
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="tempoTrabalho" id="TempoTrabalho" class="CampoText" placeholder="Tempo de Trabalho" value="<?=$tempoTrabalho?>">
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="text" name="telefone" id="Telefone" class="CampoText" placeholder="Telefone" value="<?=$telefone?>">
+                    </div>
+                </div>
 
                 <div class="row justify-content-md-center">
                     <div class="col">
                         <h1>Portfólio</h1>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col"></div>
+                <div class="row justify-content-md-center">
                     <div class="col">
-                        <img src="../../../../img/Logo.png" alt="">
+                        <input type="text" id="Link" class="CampoText" placeholder="Link do drive">
                     </div>
-                    <div class="col">
-                        <img src="../../../../img/Logo.png" alt="">
-                    </div>
-                    <div class="col">
-                        <img src="../../../../img/Logo.png" alt="">
-                    </div>
-                    <div class="col"></div>
                 </div>
-
 
                 <div class="row justify-content-md-center">
                     <div class="col">
                         <h1>Adicionais</h1>
                     </div>
                 </div>
-                <div class="row">
-                    <p class="Descricao"><?=$adicionais?></p>
-                </div>
-
-                <div class="row justify-content-md-center">
+                <div class="row d-flex justify-content-center" >
                     <div class="col">
-                        <button onclick="window.location.href = '../Cadastrar/editar.php'" id="Botao">Editar</button>
+                        <input type="text" name="adicionais" id="Descricao" class="CampoText" placeholder="Descrição" value="<?=$adicionais?>">
                     </div>
                 </div>
-
-            </div>
-        <?php }} ?>
-
+                <!--Botao--> 
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <input type="submit" id="Botao" value="Salvar"></input>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <?php }}?>
     </body>
 </html>

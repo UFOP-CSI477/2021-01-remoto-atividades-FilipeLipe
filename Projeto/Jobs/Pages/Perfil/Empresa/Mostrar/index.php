@@ -128,7 +128,7 @@
 
             <div class="row justify-content-md-center">
                 <div class="col">
-                    <button onclick="window.location.href = '../Cadastrar/index.html'" id="Botao">Editar</button>
+                    <button onclick="window.location.href = '../Cadastrar/editar.php'" id="Botao">Editar</button>
                 </div>
             </div>
 
