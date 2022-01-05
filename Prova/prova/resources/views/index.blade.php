@@ -5,23 +5,26 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>srtdash - SEO Dashboard</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/metisMenu.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <link rel="shortcut icon" type="image/png" href="../images/icon/logo.png">
+    <link href="{{ asset('srtdash/assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('srtdash/assets/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('srtdash/assets/css/themify-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('srtdash/assets/css/metisMenu.css') }}" rel="stylesheet">
+    <link href="{{ asset('srtdash/assets/css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('srtdash/assets/css/slicknav.min.css') }}" rel="stylesheet">
+
     <!-- amchart css -->
     <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
     <!-- others css -->
-    <link rel="stylesheet" href="assets/css/typography.css">
-    <link rel="stylesheet" href="assets/css/default-css.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <link href="{{ asset('srtdash/assets/css/typography.css') }}" rel="stylesheet">
+    <link href="{{ asset('srtdash/assets/css/default-css.css') }}" rel="stylesheet">
+    <link href="{{ asset('srtdash/assets/css/styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('srtdash/assets/css/responsive.css') }}" rel="stylesheet">
     <!-- modernizr css -->
-    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body>
@@ -39,40 +42,40 @@
         <div class="sidebar-menu">
             <div class="sidebar-header">
                 <div class="logo">
-                    <a href="index.html"><img src="assets/images/icon/logo.png" alt="logo"></a>
+                    <a href="index.html"><img src="../images/icon/logo.png" alt="logo"></a>
                 </div>
             </div>
             <div class="main-menu">
                 <div class="menu-inner">
                     <nav>
-                        <ul class="metismenu" id="menu">
+                    <ul class="metismenu" id="menu">
                             <li>
-                                <a href="index.html" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                                <a href="{{' / '}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Menu Principal</span></a>
                             </li>
                             <li class="active">
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Formularios</span></a>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Cadastros</span></a>
                                 <ul class="collapse">
-                                    <li class=""><a href="form.html">Form1</a></li>
-                                    <li class=""><a href="form.html">Form2</a></li>
-                                    <li class=""><a href="form.html">Form3</a></li>
-                                    <li class=""><a href="form.html">Form4</a></li>
+                                    <li class=""><a href="{{' /cadastropessoas '}}">Pessoas</a></li>
+                                    <li class=""><a href="{{' /cadastrovacinas '}}">Vacinas</a></li>
+                                    <li class=""><a href="{{' /cadastrounicades '}}">Unidades</a></li>
+                                    <li class=""><a href="{{' /cadastroregistros '}}">Registros</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
-                                    <span>Tables</span></a>
+                                    <span>Relatorios</span></a>
                                 <ul class="collapse">
-                                    <li><a href="datatable.html">datatable1</a></li>
-                                    <li><a href="datatable.html">datatable2</a></li>
-                                    <li><a href="datatable.html">datatable3</a></li>
-                                    <li><a href="datatable.html">datatable4</a></li>
+                                    <li><a href="{{' /tabelapessoas '}}">Pessoas</a></li>
+                                    <li><a href="{{' /tabelavacinas '}}">Vacinas</a></li>
+                                    <li><a href="{{' /tabelaunidades '}}">Unidades</a></li>
+                                    <li><a href="{{' /tabelaregistros '}}">Registros</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layers-alt"></i> <span>Pages</span></a>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layers-alt"></i> <span>Login / Cadastro</span></a>
                                 <ul class="collapse">
-                                    <li><a href="login2.html">Login 2</a></li>
-                                    <li><a href="register2.html">Register 2</a></li>
+                                    <li><a href="{{' /login '}}">Login</a></li>
+                                    <li><a href="{{' /cadastro '}}">Cadastro</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -93,7 +96,7 @@
                                 <div class="card">
                                     <div class="seo-fact sbg1">
                                         <div class="p-4 d-flex justify-content-between align-items-center">
-                                            <div class="seofct-icon"><i class="ti-thumb-up"></i> Likes</div>
+                                            <div class="seofct-icon"><i class="ti-thumb-up"></i></div>
                                             <h2>2,315</h2>
                                         </div>
                                         <canvas id="seolinechart1" height="50"></canvas>
@@ -295,14 +298,14 @@
         <!-- main content area end -->
     </div>
     <!-- jquery latest version -->
-    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="../js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/metisMenu.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.min.js"></script>
-    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/metisMenu.min.js"></script>
+    <script src="../js/jquery.slimscroll.min.js"></script>
+    <script src="../js/jquery.slicknav.min.js"></script>
 
     <!-- start chart js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
@@ -318,16 +321,16 @@
     <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
     <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
     <!-- all line chart activation -->
-    <script src="assets/js/line-chart.js"></script>
+    <script src="../js/line-chart.js"></script>
     <!-- all pie chart -->
-    <script src="assets/js/pie-chart.js"></script>
+    <script src="../js/pie-chart.js"></script>
     <!-- all bar chart -->
-    <script src="assets/js/bar-chart.js"></script>
+    <script src="../js/bar-chart.js"></script>
     <!-- all map chart -->
-    <script src="assets/js/maps.js"></script>
+    <script src="../js/maps.js"></script>
     <!-- others plugins -->
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 
 </html>
