@@ -55,22 +55,23 @@
                                 <a href="{{' / '}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Menu Principal</span></a>
                             </li>
                             <li class="active">
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Cadastros</span></a>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i>
+                                    <span>Cadastros</span></a>
                                 <ul class="collapse">
-                                    <li class=""><a href="{{' /cadastropessoas '}}">Pessoas</a></li>
-                                    <li class=""><a href="{{' /cadastrovacinas '}}">Vacinas</a></li>
-                                    <li class=""><a href="{{' /cadastrounicades '}}">Unidades</a></li>
-                                    <li class=""><a href="{{' /cadastroregistros '}}">Registros</a></li>
+                                    <li class=""><a href="{{' /cadastros/pessoas '}}">Pessoas</a></li>
+                                    <li class=""><a href="{{' /cadastros/vacinas '}}">Vacinas</a></li>
+                                    <li class=""><a href="{{' /cadastros/unicades '}}">Unidades</a></li>
+                                    <li class=""><a href="{{' /cadastros/registros '}}">Registros</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
                                     <span>Relatorios</span></a>
                                 <ul class="collapse">
-                                    <li><a href="{{' /tabelapessoas '}}">Pessoas</a></li>
-                                    <li><a href="{{' /tabelavacinas '}}">Vacinas</a></li>
-                                    <li><a href="{{' /tabelaunidades '}}">Unidades</a></li>
-                                    <li><a href="{{' /tabelaregistros '}}">Registros</a></li>
+                                    <li><a href="{{' /relatorios/pessoas '}}">Pessoas</a></li>
+                                    <li><a href="{{' /relatorios/vacinas '}}">Vacinas</a></li>
+                                    <li><a href="{{' /relatorios/unidades '}}">Unidades</a></li>
+                                    <li><a href="{{' /relatorios/registros '}}">Registros</a></li>
                                 </ul>
                             </li>
                             <li>

@@ -17,49 +17,49 @@ use App\Models\Pessoa;
 
 
 Route::get('/', function () {
-    return view('index');
+    return view('principal');
 });
 
 
 
 
-Route::get('/tabelapessoas', function () {
-    return view('tabelaPessoas');
+Route::get('/relatorios/pessoas', function () {
+    return view('relatorios.pessoas');
 });
 
 
-Route::get('/tabelavacinas', function () {
-    return view('tabelaVacinas');
+Route::get('/relatorios/vacinas', function () {
+    return view('relatorios.vacinas');
 });
 
 
-Route::get('/tabelaunidades', function () {
-    return view('tabelaUnidades');
+Route::get('/relatorios/unidades', function () {
+    return view('relatorios.unidades');
 });
 
 
-Route::get('/tabelaregistros', function () {
-    return view('tabelaRegistros');
+Route::get('/relatorios/registros', function () {
+    return view('relatorios.registros');
 });
 
 
 
 
 
-Route::get('/cadastropessoas', function () {
-    return view('cadastroPessoas');
+Route::get('/cadastros/pessoas', function () {
+    return view('cadastros.pessoas');
 });
 
-Route::get('/cadastrovacinas', function () {
-    return view('cadastroVacinas');
+Route::get('/cadastros/vacinas', function () {
+    return view('cadastros.vacinas');
 });
 
-Route::get('/cadastrounicades', function () {
-    return view('cadastroUnidades');
+Route::get('/cadastros/unicades', function () {
+    return view('cadastros.unidades');
 });
 
-Route::get('/cadastroregistros', function () {
-    return view('cadastroRegistros');
+Route::get('/cadastros/registros', function () {
+    return view('cadastros.registros');
 });
 
 
@@ -77,23 +77,15 @@ Route::get('/cadastro', function () {
 
 
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/pessoas/todos', function(){
+/*Route::get('/pessoas/todos', function(){
 
     $pessoas = Pessoa::all();
 
     return view('index', [ 'dados' => $pessoas]); 
  
-});
+});*/
 
-Route::get('/pessoas/{id}',function($id){
+/*Route::get('/pessoas/{id}',function($id){
 
     $pessoa = Pessoa::findOrFail($id);
 
@@ -102,4 +94,4 @@ Route::get('/pessoas/{id}',function($id){
     }
 
     return view('index', ['dados' => $pessoa]);
-});
+});*/
