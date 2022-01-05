@@ -14,15 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Models\Pessoa;
+use App\Http\Controllers\RelatoriosPessoasController;
 
 
 Route::get('/', function () {
     return view('principal');
-});
+})->name('principal');
 
 
+Route::resource('/relatorios/pessoas', RelatoriosPessoasController::class);
 
-
+/*
 Route::get('/relatorios/pessoas', function () {
     return view('relatorios.pessoas');
 });
@@ -42,7 +44,7 @@ Route::get('/relatorios/registros', function () {
     return view('relatorios.registros');
 });
 
-
+*/
 
 
 
