@@ -13,6 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Models\Pessoa;
+
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/ola', function(){
+    return 'Olá Mundo!!';
+});
+
+Route::get('/pessoas', function(){
+    return Pessoa::all();
 });
