@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Form JS</title>
+
+    <script>
+        'use strict'
+
+        function Pessoa(nome,idade,endereco){
+            this.nome = nome;
+            this.idade = idade;
+            this.endereco = endereco;
+        }
+
+        function carregarDados(){
+            
+            const nome = document.frmDados.nome.value;
+            const idade = document.frmDados.idade.value;
+            const endereco = document.frmDados.endereco.value;
+
+            const pessoa = new Pessoa(nome,idade,endereco);
+            console.log(pessoa);
+
+            window.alert(`${nome}, cuidados pois seus dados agora estão circulando na internet, todos sabem que você tem ${idade} anos e mora no endereço ${endereco} !! `);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Form JS</h1>
+
+        <form action="" name="frmDados" method="post">
+            <input type="text" name="nome" id="" placeholder="Nome">
+            <input type="text" name="idade" id="" placeholder="Idade">
+            <input type="text" name="endereco" id="" placeholder="Endereco">
+            <input type="button" value="Enviar" onclick="carregarDados()">
+        </form>
+    </div>
+</body>
+</html>

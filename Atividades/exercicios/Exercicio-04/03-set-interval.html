@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Form JS</title>
+
+    <script>
+        'use strict'
+        let contNoticia = 0;
+        function Noticia(noticia,data){
+            this.noticia = noticia;
+            this.data = data;
+        }
+
+        function carregarNoticia(){
+            
+            const noticia = document.frmDados.noticia.value;
+            const data = Date();
+
+            const not = new Noticia(noticia, data);
+            document.getElementById("noticia").innerHTML = not.noticia;
+            document.getElementById("hora").innerHTML = not.data;
+            contador();
+        }
+
+        function contador(){
+            document.getElementById("contNoticia").innerHTML = `contNoticia = ${contNoticia}`;
+            contNoticia++;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Noticiario</h1>
+
+        <form action="" name="frmDados" method="post">
+            <input type="text" name="noticia">
+            <input type="button" value="Nova noticia" onclick="carregarNoticia()">
+        </form>
+        <h2>Contador de noticias</h2>
+        <h3 id="contNoticia"></h3>  
+
+        <h4 id="noticia"></h4>
+        <h5 id="hora"></h5>
+    </div>
+</body>
+</html>

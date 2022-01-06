@@ -1,0 +1,61 @@
+#table{
+    
+    color: black;
+    text-align: center;
+    padding-left: auto;
+    padding-right: auto;
+    border-style: solid;
+    border: 1px solid black;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    margin: 0 auto; 
+    width: 70%;
+}
+a:link{
+    text-decoration: none;
+    color: black;
+    font-family: 'The Nautigal', cursive;
+}
+a{
+    padding-left: 3rem;
+    text-align: center;
+}
+a:hover{
+    background-color: black;
+    color: white;
+}
+h1{
+    text-align: center;
+    font-family: 'The Nautigal', cursive;
+}
+h2{
+    text-align: center;
+    font-family: 'The Nautigal', cursive;
+}
+h3{
+    text-align: center;
+    font-family: 'The Nautigal', cursive;
+}
+h4{
+    text-align: center;
+    font-family: 'The Nautigal', cursive;
+}
+h5{
+    text-align: center;
+    font-family: 'The Nautigal', cursive;
+}
+img{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding-left: 35rem;
+    width: 30%;
+}
+
+#menu{
+    margin: 0 auto; 
+}
+
+form{
+    padding-left: 39rem;
+}

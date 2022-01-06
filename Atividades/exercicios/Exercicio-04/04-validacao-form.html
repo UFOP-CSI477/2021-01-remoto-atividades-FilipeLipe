@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Form JS</title>
+
+    <script>
+        
+        function validar(campo){
+            let n = campo.value;
+
+            if(isNaN( parseInt(n) )){
+                window.alert("Informe valores corretos!");
+                campo.value = "";
+                return false;
+            }
+            return true;
+        }
+
+        function calcular(){
+            let n1 = document.dados.value1.value;
+            let n2 = document.dados.value2.value;
+            console.log(n1);
+            console.log(n2);
+            if( validar(n1) && validar(n2)){
+                let resultado = parseInt(n1) + parseInt(n2);
+                console.log(resultado);
+                document.getElementById("result").innerHTML = resultado;
+            }
+
+            
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Calculadora validada</h1>
+
+        <form action="" name="dados">
+            <input type="text" name="value1" placeholder="Valor 1">
+            <input type="text" name="value2" placeholder="Valor 2">
+            <input type="button" value="Calcular" onclick="calcular()">
+        </form>
+        <h2>Resultado</h2>
+        <h3 id="result"></h3>  
+    </div>
+</body>
+</html>
