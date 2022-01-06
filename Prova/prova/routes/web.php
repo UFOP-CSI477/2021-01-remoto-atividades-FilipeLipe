@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Models\Pessoa;
-use App\Http\Controllers\RelatoriosPessoasController;
+use App\Http\Controllers\PessoaController;
+use App\Http\Controllers\VacinaController;
+use App\Http\Controllers\UnidadeController;
+use App\Http\Controllers\RegistroController;
 
 
 Route::get('/', function () {
@@ -22,7 +25,10 @@ Route::get('/', function () {
 })->name('principal');
 
 
-Route::resource('/relatorios/pessoas', RelatoriosPessoasController::class);
+Route::resource('/pessoas', PessoaController::class);
+Route::resource('/vacinas', VacinaController::class);
+Route::resource('/unidades', UnidadeController::class);
+Route::resource('/registros', RegistroController::class);
 
 /*
 Route::get('/relatorios/pessoas', function () {
@@ -44,7 +50,7 @@ Route::get('/relatorios/registros', function () {
     return view('relatorios.registros');
 });
 
-*/
+
 
 
 
@@ -79,15 +85,15 @@ Route::get('/cadastro', function () {
 
 
 
-/*Route::get('/pessoas/todos', function(){
+Route::get('/pessoas/todos', function(){
 
     $pessoas = Pessoa::all();
 
     return view('index', [ 'dados' => $pessoas]); 
  
-});*/
+});
 
-/*Route::get('/pessoas/{id}',function($id){
+Route::get('/pessoas/{id}',function($id){
 
     $pessoa = Pessoa::findOrFail($id);
 

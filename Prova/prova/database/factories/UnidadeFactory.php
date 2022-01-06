@@ -14,7 +14,10 @@ class UnidadeFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nome' => $this->faker->firstNameMale,
+            'bairro' => $this->faker->streetName,
+            'cidade' => $this->faker->city,
+            'estados' => $this->faker->state,
         ];
     }
 }

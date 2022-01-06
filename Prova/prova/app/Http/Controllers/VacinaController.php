@@ -15,7 +15,8 @@ class VacinaController extends Controller
      */
     public function index()
     {
-        //
+        $vacinas = Vacina::orderBy('nome') -> get();
+        return view('Vacinas.vacinasR', ['vacinas' => $vacinas]);
     }
 
     /**

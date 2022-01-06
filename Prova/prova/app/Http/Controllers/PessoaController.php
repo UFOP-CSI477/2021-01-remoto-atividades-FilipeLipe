@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Pessoa;
 use Illuminate\Http\Request;
 
-class RelatoriosPessoasController extends Controller
+class PessoaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class RelatoriosPessoasController extends Controller
     public function index()
     {
         $pessoas = Pessoa::orderBy('nome') -> get();
-        return view('relatorios.pessoas', ['pessoas' => $pessoas]);
+        return view('Pessoas.pessoasR', ['pessoas' => $pessoas]);
     }
 
     /**

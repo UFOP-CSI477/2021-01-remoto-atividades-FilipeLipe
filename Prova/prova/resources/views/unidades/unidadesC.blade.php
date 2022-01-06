@@ -49,24 +49,24 @@
                             <li>
                                 <a href="{{' / '}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Menu Principal</span></a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i>
                                     <span>Cadastros</span></a>
                                 <ul class="collapse">
-                                    <li class=""><a href="{{' /cadastros/pessoas '}}">Pessoas</a></li>
-                                    <li class=""><a href="{{' /cadastros/vacinas '}}">Vacinas</a></li>
-                                    <li class=""><a href="{{' /cadastros/unicades '}}">Unidades</a></li>
-                                    <li class=""><a href="{{' /cadastros/registros '}}">Registros</a></li>
+                                    <li class=""><a href="{{route('pessoas.create')}}">Pessoas</a></li>
+                                    <li class=""><a href="{{route('vacinas.create')}}">Vacinas</a></li>
+                                    <li class=""><a href="{{route('unidades.create')}}">Unidades</a></li>
+                                    <li class=""><a href="{{route('registros.create')}}">Registros</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
                                     <span>Relatorios</span></a>
                                 <ul class="collapse">
-                                    <li><a href="{{' /relatorios/pessoas '}}">Pessoas</a></li>
-                                    <li><a href="{{' /relatorios/vacinas '}}">Vacinas</a></li>
-                                    <li><a href="{{' /relatorios/unidades '}}">Unidades</a></li>
-                                    <li><a href="{{' /relatorios/registros '}}">Registros</a></li>
+                                    <li><a href="{{route('pessoas.index')}}">Pessoas</a></li>
+                                    <li><a href="{{route('vacinas.index')}}">Vacinas</a></li>
+                                    <li><a href="{{route('unidades.index')}}">Unidades</a></li>
+                                    <li><a href="{{route('registros.index')}}">Registros</a></li>
                                 </ul>
                             </li>
                             <li>
