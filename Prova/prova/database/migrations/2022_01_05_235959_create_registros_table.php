@@ -15,12 +15,24 @@ class CreateRegistrosTable extends Migration
     {
         Schema::create('registros', function (Blueprint $table) {
             $table->id();
-            $table->integer('pessoa_id');
-            $table->integer('unidade_id');
-            $table->integer('vacina_id');
+            $table->unsignedInteger('pessoa_id');
+            $table->unsignedInteger('unidade_id');
+            $table->unsignedInteger('vacina_id');
             $table->tinyInteger('doses');
             $table->date('data');
             $table->timestamps();
+
+            $table->foreign('pessoa_id')
+                ->references('id')
+                ->on('pessoas');
+
+            $table->foreign('unidade_id')
+                ->references('id')
+                ->on('unidades');
+            
+            $table->foreign('vacina_id')
+                ->references('id')
+                ->on('vacinas');
         });
     }
 
