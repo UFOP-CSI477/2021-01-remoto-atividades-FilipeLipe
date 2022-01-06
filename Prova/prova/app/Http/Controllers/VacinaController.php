@@ -26,7 +26,7 @@ class VacinaController extends Controller
      */
     public function create()
     {
-        //
+        return view('Vacinas.vacinasC');
     }
 
     /**
@@ -35,11 +35,12 @@ class VacinaController extends Controller
      * @param  \App\Http\Requests\StoreVacinaRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreVacinaRequest $request)
+    public function store(StoreVacinaRequest  $request)
     {
-        //
+        Vacina::create($request->all());
+        session()->flash('mensagem', 'Cadastro efetuado com sucesso!');
+        return redirect()->route('Vacinas.vacinasR');
     }
-
     /**
      * Display the specified resource.
      *

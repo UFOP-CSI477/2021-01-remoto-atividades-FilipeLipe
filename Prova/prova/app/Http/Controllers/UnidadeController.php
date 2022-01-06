@@ -26,7 +26,7 @@ class UnidadeController extends Controller
      */
     public function create()
     {
-        //
+        return view('Unidades.unidadesC');
     }
 
     /**
@@ -35,9 +35,11 @@ class UnidadeController extends Controller
      * @param  \App\Http\Requests\StoreUnidadeRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreUnidadeRequest $request)
+    public function store(StoreUnidadeRequest  $request)
     {
-        //
+        Unidade::create($request->all());
+        session()->flash('mensagem', 'Cadastro efetuado com sucesso!');
+        return redirect()->route('Unidades.unidadesR');
     }
 
     /**
