@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePessoaRequest;
 use App\Models\Pessoa;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,7 @@ class PessoaController extends Controller
      */
     public function create()
     {
-        //
+        return view('Pessoas.pessoasC');
     }
 
     /**
@@ -34,9 +35,11 @@ class PessoaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePessoaRequest  $request)
     {
-        //
+        Pessoa::create($request->all());
+        session()->flash('mensagem', 'Cadastro efetuado com sucesso!');
+        return redirect()->route('Pessoas.pessoasR');
     }
 
     /**

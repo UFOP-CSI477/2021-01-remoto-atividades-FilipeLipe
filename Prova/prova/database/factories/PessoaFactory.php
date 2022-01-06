@@ -19,7 +19,7 @@ class PessoaFactory extends Factory
             'cidade' => $this->faker->city,
             'estado' => $this->faker->state,
             'data_nascimento' => $this->faker->date($format = 'd-m-Y', $max = 'now'),
-            'cpf' => $this->faker->randomDigit
+            'cpf' => $this->faker->numberBetween($min = 10000000000, $max = 99999999999),
         ];
     }
 }

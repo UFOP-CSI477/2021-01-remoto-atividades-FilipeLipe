@@ -17,7 +17,7 @@ class VacinaFactory extends Factory
             'nome' => $this->faker->firstNameMale,
             'fabricante' => $this->faker->company,
             'pais' => $this->faker->country,
-            'doses' => $this->faker->randomNumber($nbDigits = NULL, $strict = false)
+            'doses' => $this->faker->numberBetween($min = 1, $max = 3)
         ];
     }
 }
