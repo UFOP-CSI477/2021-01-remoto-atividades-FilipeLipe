@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Models\Pessoa;
-use App\Http\Controllers\PessoaController;
+use App\Http\Controllers\PessoaCon  troller;
 use App\Http\Controllers\VacinaController;
 use App\Http\Controllers\UnidadeController;
 use App\Http\Controllers\RegistroController;
