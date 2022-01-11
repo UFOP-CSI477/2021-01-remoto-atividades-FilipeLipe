@@ -18,7 +18,7 @@ class VotoFactory extends Factory
         return [
             'users_id' => User::factory(),
             'temas_id' => Tema::factory(),
-            'opcao' => $this->faker->numberBetween($min = 0, $max = 9999),
+            'opcao' => $this->faker->numberBetween($min = 1, $max = 3),
             'data' => $this->faker->date($format = 'd-m-Y', $max = 'now')
 
             
