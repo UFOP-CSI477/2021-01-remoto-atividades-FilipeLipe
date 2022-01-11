@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
@@ -14,7 +15,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $user = User::orderBy('name') -> get();
+        return view('adm.listarDocente', ['docente' => $user]);
     }
 
     /**
@@ -24,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('adm.incluirDocente');
     }
 
     /**
@@ -35,7 +37,22 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request->password == $request->csenha){
+            $user = new User;
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->password = $request->password;
+            $user->type = 1;
+            $user->remember_token = Str::random(10);
+            $user->save();
+            session()->flash('mensagem','Docente cadastrado com sucesso!');
+            
+        }else{
+            session()->flash('mensagem','As senhas não são iguais!');;
+        }
+        return view('adm.incluirDocente');
+        
+
     }
 
     /**
@@ -57,7 +74,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return view('adm.editDocente', ['user' => $user]);
     }
 
     /**
@@ -69,7 +86,19 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        //dd($request->all());
+        if($request->password == $request->csenha){
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->password = $request->password;
+            $user->save();
+            session()->flash('mensagem','Docente atualizado com sucesso!');
+            
+        }else{
+            session()->flash('mensagem','As senhas não são iguais!');;
+        }
+        $user = User::orderBy('name') -> get();
+        return view('adm.listarDocente', ['docente' => $user]);
     }
 
     /**

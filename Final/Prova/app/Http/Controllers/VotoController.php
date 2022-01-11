@@ -16,10 +16,10 @@ class VotoController extends Controller
      */
     public function index()
     {
-        $user = User::orderBy('name') -> get();
+        $users = User::orderBy('name') -> get();
         $voto = Voto::orderBy('tema_id') -> get();
         $tema = Tema::orderBy('id') -> get();
-        return view('docente.listarVoto', ['docente' => $voto], ['user' => $user], ['tema' => $tema]);
+        return view('docente.listarVoto', ['docente' => $voto], ['users' => $users], ['tema' => $tema]);
     }
 
     /**
@@ -41,7 +41,13 @@ class VotoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+
+        $voto = new Voto;
+        $voto->opcao = $request->opcao;
+        $voto->data = $request->data;
+        $voto->save();
+        session()->flash('mensagem','Docente cadastrado com sucesso!');
     }
 
     /**

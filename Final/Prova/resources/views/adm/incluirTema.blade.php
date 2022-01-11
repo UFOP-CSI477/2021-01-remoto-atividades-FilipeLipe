@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Formulario</title>
+    <title>IncluirTema</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="../images/icon/logo.png">
     <link href="{{ asset('srtdash/assets/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -45,18 +45,17 @@
             <div class="main-menu">
                 <div class="menu-inner">
                     <nav>
-                    <ul class="metismenu" id="menu">
+                        <ul class="metismenu" id="menu">
                             <li>
                                 <a href="{{' / '}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Logout</span></a>
                             </li>
 
-                            <li>
-                                <a href="{{route('voto.index')}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Listar Votos</span></a>
-                            </li>
-
-                            <li>
-                                <a href="{{route('voto.create')}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Lançar Votos</span></a>
-                            </li>
+                            <li><a href="{{route('tema.create')}}">Incluir Tema</a></li>
+                            <li><a href="{{route('user.create')}}">Incluir Docente</a></li>
+                            <li><a href="{{route('user.index')}}">Listar Docente</a></li>
+                            <li><a href="{{route('tema.index')}}">Listar Tema</a></li>
+                            <li><a href="{{route('voto.index')}}">Listar Voto</a></li>
+                            <li><a href="{{route('voto.index')}}">Totalizar Voto</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -75,28 +74,34 @@
                             <div class="col-12 mt-5">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Lançar Voto</h4>
-                                        <form action="{{ route('voto.store')}}" method="post">
+                                        <h4 class="header-title">Cadastro de Tema</h4>
+                                        <form action="{{ route('tema.store')}}" method="post">
                                             @csrf
+                                            <div class="form-group">
+                                                <small id="emailHelp" class="form-text text-muted">Digite a descrição do tema:</small>
+                                                <input type="text" name="descricao" class="form-control" id="exampleInputEmail1" required="required" aria-describedby="emailHelp" placeholder="Nome">
+                                            </div>
                                             <div>
-                                                <small id="emailHelp" class="form-text text-muted">Escolha o tema que deseja votar!</small>
-                                                <select name="selectTema" class="form-control">
-                                                    @foreach($tema as $t)
-                                                        <option value="{{ $t->descricao }}">{{ $t->descricao }}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>                                           
-                                            <div>
-                                                <small id="emailHelp" class="form-text text-muted">Faça sua escolha sabiamente e sem interferencia de terceiros</small>
+                                                <small id="emailHelp" class="form-text text-muted">Qual a importancia para a ordem de votação:</small>
                                                 <select name="selectOpcao" class="form-control">
-                                                        <option value="1">Favorável</option>
-                                                        <option value="2">Contrário</option>
-                                                        <option value="3">Abstenção</option>
+                                                        <option value="1">Muito Importante</option>
+                                                        <option value="2">Importante</option>
+                                                        <option value="3">Indiferente</option>
+                                                        <option value="4">Pouco Importante</option>
+                                                        <option value="5">Desnecessário</option>
                                                 </select> 
-                                            </div>                                             
+                                            </div>                                         
                                             
-                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4">Votar</button>
+                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4">Cadastrar Tema</button>
                                         </form>
+
+                                        @if(session('mensagem'))
+
+                                            <div class="alert alert-success">
+                                                {{ session('mensagem') }}
+                                            </div>
+
+                                        @endif
                                     </div>
                                 </div>
                             </div>

@@ -50,18 +50,17 @@
             <div class="main-menu">
                 <div class="menu-inner">
                     <nav>
-                    <ul class="metismenu" id="menu">
+                        <ul class="metismenu" id="menu">
                             <li>
                                 <a href="{{' / '}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Logout</span></a>
                             </li>
 
-                            <li>
-                                <a href="{{route('voto.index')}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Listar Votos</span></a>
-                            </li>
-
-                            <li>
-                                <a href="{{route('voto.create')}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Lançar Votos</span></a>
-                            </li>
+                            <li><a href="{{route('tema.create')}}">Incluir Tema</a></li>
+                            <li><a href="{{route('user.create')}}">Incluir Docente</a></li>
+                            <li><a href="{{route('user.index')}}">Listar Docente</a></li>
+                            <li><a href="{{route('tema.index')}}">Listar Tema</a></li>
+                            <li><a href="{{route('voto.index')}}">Listar Voto</a></li>
+                            <li><a href="{{route('voto.index')}}">Totalizar Voto</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -77,11 +76,7 @@
                     <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                @foreach($users as $e)
-                                    @if ($e->id == 1)
-                                        <h4 class="header-title">{{ $e->id }} - {{ $e->name }}</h4>
-                                    @endif
-                                @endforeach
+                                    <h4 class="header-title">Listar Votos</h4>
                                 <div class="data-tables datatable-dark">
                                     <table id="dataTable3" class="text-center">
                                         <thead class="text-capitalize">
@@ -92,7 +87,7 @@
                                                 <th>Opção</th>
                                                 <th>Data e Hora</th>
                                             </tr>
-                                        </thead>
+                                         </thead>
                                         <tbody>
 
                                             @foreach($docente as $d)

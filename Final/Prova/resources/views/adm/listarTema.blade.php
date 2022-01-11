@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Listar Votos Docente</title>
+    <title>Listar Tema</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="../images/icon/logo.png">
     <link rel="stylesheet" href="{{ asset('srtdash/assets/css/bootstrap.min.css') }}">
@@ -50,18 +50,17 @@
             <div class="main-menu">
                 <div class="menu-inner">
                     <nav>
-                    <ul class="metismenu" id="menu">
+                        <ul class="metismenu" id="menu">
                             <li>
                                 <a href="{{' / '}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Logout</span></a>
                             </li>
 
-                            <li>
-                                <a href="{{route('voto.index')}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Listar Votos</span></a>
-                            </li>
-
-                            <li>
-                                <a href="{{route('voto.create')}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Lançar Votos</span></a>
-                            </li>
+                            <li><a href="{{route('tema.create')}}">Incluir Tema</a></li>
+                            <li><a href="{{route('user.create')}}">Incluir Docente</a></li>
+                            <li><a href="{{route('user.index')}}">Listar Docente</a></li>
+                            <li><a href="{{route('tema.index')}}">Listar Tema</a></li>
+                            <li><a href="{{route('voto.index')}}">Listar Voto</a></li>
+                            <li><a href="{{route('voto.index')}}">Totalizar Voto</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -77,31 +76,23 @@
                     <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                @foreach($users as $e)
-                                    @if ($e->id == 1)
-                                        <h4 class="header-title">{{ $e->id }} - {{ $e->name }}</h4>
-                                    @endif
-                                @endforeach
+                                    <h4 class="header-title">Listar Tema</h4>
                                 <div class="data-tables datatable-dark">
                                     <table id="dataTable3" class="text-center">
                                         <thead class="text-capitalize">
                                             <tr>
                                                 <th>Ordem</th>
                                                 <th>Codigo</th>
-                                                <th>Descrição Tema</th>
-                                                <th>Opção</th>
-                                                <th>Data e Hora</th>
+                                                <th>Descrição</th>
                                             </tr>
-                                        </thead>
+                                         </thead>
                                         <tbody>
 
-                                            @foreach($docente as $d)
+                                            @foreach($tema as $t)
                                                 <tr>
-                                                    <td>{{ $d->opcao }}</td>
-                                                    <td>{{ $d->opcao }}</td>
-                                                    <td>{{ $d->opcao }}</td>
-                                                    <td>{{ $d->opcao }}</td>
-                                                    <td>{{ $d->data }}</td>
+                                                    <td>{{ $t->ordem }}</td>
+                                                    <td>{{ $t->id }}</td>
+                                                    <td>{{ $t->descricao }}</td>
                                                 </tr>
                                             @endforeach
                                         </tbody>

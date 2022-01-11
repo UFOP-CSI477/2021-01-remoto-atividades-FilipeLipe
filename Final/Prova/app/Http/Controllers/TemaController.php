@@ -14,7 +14,8 @@ class TemaController extends Controller
      */
     public function index()
     {
-        //
+        $tema = Tema::orderBy('ordem') -> get();
+        return view('adm.listarTema', ['tema' => $tema]);
     }
 
     /**
@@ -24,7 +25,7 @@ class TemaController extends Controller
      */
     public function create()
     {
-        //
+        return view('adm.incluirTema');
     }
 
     /**
@@ -35,7 +36,12 @@ class TemaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new Tema;
+        $user->descricao = $request->descricao;
+        $user->ordem = $request->selectOpcao;
+        $user->save();
+        session()->flash('mensagem','Tema cadastrado com sucess!');
+        return view('adm.incluirTema');
     }
 
     /**

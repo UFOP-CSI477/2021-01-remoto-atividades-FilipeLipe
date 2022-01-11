@@ -72,6 +72,9 @@
                                     <li><a href="{{route('voto.index')}}">Totalizar Voto</a></li>
                                 </ul>
                             </li>
+                            <li>
+                                <a href="{{route('user.index')}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Login</span></a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
