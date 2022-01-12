@@ -106,6 +106,9 @@
                                                 <th>Ordem</th>
                                                 <th>Descrição</th>
                                                 <th>Total de Votos</th>
+                                                <th>Favoráveis</th>
+                                                <th>Contras</th>
+                                                <th>Abstenções</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -113,18 +116,33 @@
                                             @foreach($tema as $t)
                                                 @php
                                                     $total = 0;
+                                                    $favoravel = 0;
+                                                    $contra = 0;
+                                                    $abstencao = 0;
                                                 @endphp
                                                 @foreach($voto as $v)
                                                     @if($v->tema_id == $t->id)
                                                         @php
                                                             $total++
                                                         @endphp
+                                                        @if($v->opcao == 1)
+                                                            @php $favoravel++ @endphp
+                                                        @endif
+                                                        @if($v->opcao == 2)
+                                                            @php $contra++ @endphp
+                                                        @endif
+                                                        @if($v->opcao == 3)
+                                                            @php $abstencao++ @endphp
+                                                        @endif
                                                     @endif
                                                 @endforeach
                                                 <tr>
                                                     <td>{{ $t->ordem }}</td>
                                                     <td>{{ $t->descricao }}</td>
                                                     <td>{{ $total }}</td>
+                                                    <td>{{ $favoravel }}</td>
+                                                    <td>{{ $contra }}</td>
+                                                    <td>{{ $abstencao }}</td>
                                                 </tr>
                                                 
                                             @endforeach
