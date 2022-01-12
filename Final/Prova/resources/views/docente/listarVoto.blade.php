@@ -50,7 +50,10 @@
             <div class="main-menu">
                 <div class="menu-inner">
                     <nav>
-                    <ul class="metismenu" id="menu">
+                        <ul class="metismenu" id="menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}"><i class="ti-menu"></i><span>Menu</span></a>
+                            </li>
                             <li>
                                 <a href="{{route('voto.index')}}" aria-expanded="true"><i class="ti-layout-list-thumb"></i><span>Listar Votos</span></a>
                             </li>

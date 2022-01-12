@@ -54,26 +54,6 @@
                 <div class="menu-inner">
                     <nav>
                     <ul class="metismenu" id="menu">
-                            <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-user"></i>
-                                    <span>Docente</span></a>
-                                <ul class="collapse">
-                                    <li class=""><a href="{{route('voto.index')}}">Listar</a></li>
-                                    <li class=""><a href="{{route('voto.create')}}">Lançar</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-headphone-alt"></i>
-                                    <span>ADM</span></a>
-                                <ul class="collapse">
-                                    <li><a href="{{route('tema.create')}}">Incluir Tema</a></li>
-                                    <li><a href="{{route('user.create')}}">Incluir Docente</a></li>
-                                    <li><a href="{{route('user.index')}}">Listar Docente</a></li>
-                                    <li><a href="{{route('tema.index')}}">Listar Tema</a></li>
-                                    <li><a href="{{route('voto.index')}}">Listar Voto</a></li>
-                                    <li><a href="{{route('voto.index')}}">Totalizar Voto</a></li>
-                                </ul>
-                            </li>
                             @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">

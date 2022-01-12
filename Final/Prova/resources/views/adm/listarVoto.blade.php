@@ -51,6 +51,9 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}"><i class="ti-menu"></i><span>Menu</span></a>
+                            </li>
                             <li><a href="{{route('tema.create')}}"><i class="ti-plus"></i><span>Incluir Tema</span></a></li>
                             <li><a href="{{route('user.create')}}"><i class="ti-plus"></i><span>Incluir Docente</span></a></li>
                             <li><a href="{{route('user.index')}}"><i class="ti-layout"></i><span>Listar Docente</span></a></li>
@@ -110,13 +113,13 @@
                                          </thead>
                                         <tbody>
 
-                                            @foreach($docente as $d)
+                                            @foreach($user as $u)
                                                 <tr>
-                                                    <td>{{ $d->opcao }}</td>
-                                                    <td>{{ $d->opcao }}</td>
-                                                    <td>{{ $d->opcao }}</td>
-                                                    <td>{{ $d->opcao }}</td>
-                                                    <td>{{ $d->data }}</td>
+                                                    <td>{{ $u->opcao }}</td>
+                                                    <td>{{ $u->opcao }}</td>
+                                                    <td>{{ $u->opcao }}</td>
+                                                    <td>{{ $u->opcao }}</td>
+                                                    <td>{{ $u->data }}</td>
                                                 </tr>
                                             @endforeach
                                         </tbody>

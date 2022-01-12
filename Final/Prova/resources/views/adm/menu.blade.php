@@ -54,18 +54,15 @@
                 <div class="menu-inner">
                     <nav>
                     <ul class="metismenu" id="menu">
-                            <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-headphone-alt"></i>
-                                    <span>ADM</span></a>
-                                <ul class="collapse">
-                                    <li><a href="{{route('tema.create')}}">Incluir Tema</a></li>
-                                    <li><a href="{{route('user.create')}}">Incluir Docente</a></li>
-                                    <li><a href="{{route('user.index')}}">Listar Docente</a></li>
-                                    <li><a href="{{route('tema.index')}}">Listar Tema</a></li>
-                                    <li><a href="{{route('voto.index')}}">Listar Voto</a></li>
-                                    <li><a href="{{route('voto.index')}}">Totalizar Voto</a></li>
-                                </ul>
-                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}"><i class="ti-menu"></i><span>Menu</span></a>
+                            </li>     
+                            <li><a href="{{route('tema.create')}}"><i class="ti-plus"></i><span>Incluir Tema</span></a></li>
+                            <li><a href="{{route('user.create')}}"><i class="ti-plus"></i><span>Incluir Docente</span></a></li>
+                            <li><a href="{{route('user.index')}}"><i class="ti-layout"></i><span>Listar Docente</span></a></li>
+                            <li><a href="{{route('tema.index')}}"><i class="ti-layout"></i><span>Listar Tema</span></a></li>
+                            <li><a href="{{route('voto.index')}}"><i class="ti-layout"></i><span>Listar Voto</span></a></li>
+                            <li><a href="{{route('voto.index')}}"><i class="ti-server"></i><span>Totalizar Voto</span></a></li>
                             @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -114,8 +111,16 @@
                                 </div>
                             </div>
                         </div>
+                        @if(session('mensagem'))
+
+                        <div class="alert alert-success">
+                            {{ session('mensagem') }}
+                        </div>
+
+                        @endif
                     </div>
                     <!-- testimonial area end -->
+                    
                 </div>
             </div>
         </div>

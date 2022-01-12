@@ -53,14 +53,16 @@
             <div class="main-menu">
                 <div class="menu-inner">
                     <nav>
-                    <ul class="metismenu" id="menu">
+                        <ul class="metismenu" id="menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}"><i class="ti-menu"></i><span>Menu</span></a>
+                            </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-user"></i>
-                                    <span>Docente</span></a>
-                                <ul class="collapse">
-                                    <li class=""><a href="{{route('voto.index')}}">Listar</a></li>
-                                    <li class=""><a href="{{route('voto.create')}}">Lançar</a></li>
-                                </ul>
+                                <a href="{{route('voto.index')}}" aria-expanded="true"><i class="ti-layout-list-thumb"></i><span>Listar Votos</span></a>
+                            </li>
+
+                            <li>
+                                <a href="{{route('voto.create')}}" aria-expanded="true"><i class="ti-plus"></i><span>Lançar Votos</span></a>
                             </li>
                             @guest
                             @if (Route::has('login'))
@@ -110,6 +112,13 @@
                                 </div>
                             </div>
                         </div>
+                        @if(session('mensagem'))
+
+                        <div class="alert alert-success">
+                            {{ session('mensagem') }}
+                        </div>
+
+                        @endif
                     </div>
                     <!-- testimonial area end -->
                 </div>
