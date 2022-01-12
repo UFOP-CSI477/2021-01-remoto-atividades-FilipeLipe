@@ -116,9 +116,27 @@
 
                                             @foreach($voto as $v)
                                                 <tr>
-                                                    <td>{{ $v->user_id }}</td>
-                                                    <td>{{ $v->tema_id }}</td>
-                                                    <td>{{ $v->opcao }}</td>
+                                                    <td>{{ $v->tema->ordem }}</td>
+                                                    <td>{{ $v->tema->id }}</td>
+                                                    <td>{{ $v->tema->descricao }}</td>
+                                                    <td>{{ $v->user->id }}</td>
+                                                    <td>{{ $v->user->name }}</td>
+                                                    @switch( $v->opcao )
+                                                            @case(1)
+                                                                <td>Favorável</td>
+                                                                @break
+
+                                                            @case(2)
+                                                                <td>Contrário</td>
+                                                                @break
+                                                            
+                                                            @case(3)
+                                                                <td>Abstenção</td>
+                                                                @break
+
+                                                            @default
+                                                                <td>Opção não encontrada</td>
+                                                        @endswitch
                                                     <td>{{ $v->data }}</td>
                                                 </tr>
                                             @endforeach
