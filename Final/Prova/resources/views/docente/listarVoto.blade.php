@@ -52,16 +52,36 @@
                     <nav>
                     <ul class="metismenu" id="menu">
                             <li>
-                                <a href="{{' / '}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Logout</span></a>
+                                <a href="{{route('voto.index')}}" aria-expanded="true"><i class="ti-layout-list-thumb"></i><span>Listar Votos</span></a>
                             </li>
 
                             <li>
-                                <a href="{{route('voto.index')}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Listar Votos</span></a>
+                                <a href="{{route('voto.create')}}" aria-expanded="true"><i class="ti-plus"></i><span>Lançar Votos</span></a>
                             </li>
+                            @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
 
-                            <li>
-                                <a href="{{route('voto.create')}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Lançar Votos</span></a>
-                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                            @else
+                                <li>
+                                    <a class="nav-link" href="{{ route('logout') }}" 
+                                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </li>
+                            @endguest
                         </ul>
                     </nav>
                 </div>

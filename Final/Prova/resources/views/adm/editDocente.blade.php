@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="../images/icon/logo.png">
     <link href="{{ asset('srtdash/assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('srtdash/assets/css/themify-icons.css') }}">
     <link href="{{ asset('srtdash/assets/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('srtdash/assets/css/metisMenu.css') }}" rel="stylesheet">
     <link href="{{ asset('srtdash/assets/css/owl.carousel.min.css') }}" rel="stylesheet">
@@ -46,16 +47,36 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
-                            <li>
-                                <a href="{{' / '}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Logout</span></a>
-                            </li>
+                            <li><a href="{{route('tema.create')}}"><i class="ti-plus"></i><span>Incluir Tema</span></a></li>
+                            <li><a href="{{route('user.create')}}"><i class="ti-plus"></i><span>Incluir Docente</span></a></li>
+                            <li><a href="{{route('user.index')}}"><i class="ti-layout"></i><span>Listar Docente</span></a></li>
+                            <li><a href="{{route('tema.index')}}"><i class="ti-layout"></i><span>Listar Tema</span></a></li>
+                            <li><a href="{{route('voto.index')}}"><i class="ti-layout"></i><span>Listar Voto</span></a></li>
+                            <li><a href="{{route('voto.index')}}"><i class="ti-server"></i><span>Totalizar Voto</span></a></li>
+                            @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
 
-                            <li><a href="{{route('tema.create')}}">Incluir Tema</a></li>
-                            <li><a href="{{route('user.create')}}">Incluir Docente</a></li>
-                            <li><a href="{{route('user.index')}}">Listar Docente</a></li>
-                            <li><a href="{{route('tema.index')}}">Listar Tema</a></li>
-                            <li><a href="{{route('voto.index')}}">Listar Voto</a></li>
-                            <li><a href="{{route('voto.index')}}">Totalizar Voto</a></li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                            @else
+                                <li>
+                                    <a class="nav-link" href="{{ route('logout') }}" 
+                                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </li>
+                            @endguest
                         </ul>
                     </nav>
                 </div>
@@ -88,11 +109,11 @@
                                                 <input type="text" name="email" class="form-control" id="exampleInputPassword1" required="required" placeholder="Email" value="{{ $user->email }}">
                                             </div>
                                             <div class="form-group">
-                                                <small id="emailHelp" class="form-text text-muted">Cuidado com a senha, crie algo forte e tente não esquecer!</small>
-                                                <input type="text" name="password" class="form-control" id="exampleInputPassword1" required="required" placeholder="Senha" value="{{ $user->password }}">
+                                                <small id="emailHelp" class="form-text text-muted">Sua senha é salva como hash no banco de dados, não conseguimos carrega-la aqui! Insira Novamente!</small>
+                                                <input type="password" name="password" class="form-control" id="exampleInputPassword1" required="required" placeholder="Senha">
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" name="csenha" class="form-control" id="exampleInputPassword1" required="required" placeholder="Confirmar Senha" value="{{ $user->password }}">
+                                                <input type="password" name="csenha" class="form-control" id="exampleInputPassword1" required="required" placeholder="Confirmar Senha">
                                             </div>                                            
                                             
                                             <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4">Cadastrar Docente</button>

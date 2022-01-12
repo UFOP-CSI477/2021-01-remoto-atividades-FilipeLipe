@@ -51,16 +51,36 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
-                            <li>
-                                <a href="{{' / '}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Logout</span></a>
-                            </li>
+                            <li><a href="{{route('tema.create')}}"><i class="ti-plus"></i><span>Incluir Tema</span></a></li>
+                            <li><a href="{{route('user.create')}}"><i class="ti-plus"></i><span>Incluir Docente</span></a></li>
+                            <li><a href="{{route('user.index')}}"><i class="ti-layout"></i><span>Listar Docente</span></a></li>
+                            <li><a href="{{route('tema.index')}}"><i class="ti-layout"></i><span>Listar Tema</span></a></li>
+                            <li><a href="{{route('voto.index')}}"><i class="ti-layout"></i><span>Listar Voto</span></a></li>
+                            <li><a href="{{route('voto.index')}}"><i class="ti-server"></i><span>Totalizar Voto</span></a></li>
+                            @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
 
-                            <li><a href="{{route('tema.create')}}">Incluir Tema</a></li>
-                            <li><a href="{{route('user.create')}}">Incluir Docente</a></li>
-                            <li><a href="{{route('user.index')}}">Listar Docente</a></li>
-                            <li><a href="{{route('tema.index')}}">Listar Tema</a></li>
-                            <li><a href="{{route('voto.index')}}">Listar Voto</a></li>
-                            <li><a href="{{route('voto.index')}}">Totalizar Voto</a></li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                            @else
+                                <li>
+                                    <a class="nav-link" href="{{ route('logout') }}" 
+                                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </li>
+                            @endguest
                         </ul>
                     </nav>
                 </div>
