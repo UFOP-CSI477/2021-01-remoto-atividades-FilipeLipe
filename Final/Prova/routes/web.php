@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TemaController;
 use App\Http\Controllers\VotoController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\TotalControler;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -26,6 +27,7 @@ Route::get('/', function () {
 Route::resource('/tema', TemaController::class)->middleware('auth');
 Route::resource('/voto', VotoController::class)->middleware('auth');
 Route::resource('/user', UserController::class)->middleware('auth');
+Route::resource('/total', TotalControler::class)->middleware('auth');
 
 Auth::routes();
 

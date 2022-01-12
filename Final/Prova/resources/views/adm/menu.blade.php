@@ -62,7 +62,7 @@
                             <li><a href="{{route('user.index')}}"><i class="ti-layout"></i><span>Listar Docente</span></a></li>
                             <li><a href="{{route('tema.index')}}"><i class="ti-layout"></i><span>Listar Tema</span></a></li>
                             <li><a href="{{route('voto.index')}}"><i class="ti-layout"></i><span>Listar Voto</span></a></li>
-                            <li><a href="{{route('voto.index')}}"><i class="ti-server"></i><span>Totalizar Voto</span></a></li>
+                            <li><a href="{{route('total.index')}}"><i class="ti-server"></i><span>Totalizar Voto</span></a></li>
                             @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -101,7 +101,7 @@
                                     <div class="tst-item">
                                         <div class="tstu-content">
                                             <h4 class="tstu-name">Exclarecimentos</h4>
-                                            <p>Fernando, na pagina de Adm, tudo o que foi pedido foi implementado, tive apenas um problema em fazer o botão de Totalizar Voto redirecionar para a pagina correta dele, por conta de estar compartilhando a mesma rota que o listar voto. Por conta disso, utilize a rota</p>
+                                            <p>Fernando, na pagina de Adm, tudo o que foi pedido foi implementado, tive apenas um problema em fazer o botão de "Totalizar Voto" redirecionar para a pagina correta dele, por conta de estar compartilhando a mesma rota que o listar voto. Por conta disso, criei um Model Total e um controller para ele, não sei se poderia fazer isso, mas foi o jeito que consegui implementar para acessar tal pagina.</p>
                                         </div>
                                     </div>
                                 </div>

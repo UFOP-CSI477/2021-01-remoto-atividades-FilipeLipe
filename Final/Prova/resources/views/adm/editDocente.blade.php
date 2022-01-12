@@ -55,7 +55,7 @@
                             <li><a href="{{route('user.index')}}"><i class="ti-layout"></i><span>Listar Docente</span></a></li>
                             <li><a href="{{route('tema.index')}}"><i class="ti-layout"></i><span>Listar Tema</span></a></li>
                             <li><a href="{{route('voto.index')}}"><i class="ti-layout"></i><span>Listar Voto</span></a></li>
-                            <li><a href="{{route('voto.index')}}"><i class="ti-server"></i><span>Totalizar Voto</span></a></li>
+                            <li><a href="{{route('total.index')}}"><i class="ti-server"></i><span>Totalizar Voto</span></a></li>
                             @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
