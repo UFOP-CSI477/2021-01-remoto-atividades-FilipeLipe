@@ -82,7 +82,7 @@
                                                 <small id="emailHelp" class="form-text text-muted">Escolha o tema que deseja votar!</small>
                                                 <select name="selectTema" class="form-control">
                                                     @foreach($tema as $t)
-                                                        <option value="{{ $t->descricao }}">{{ $t->descricao }}</option>
+                                                        <option value="{{ $t->id }}">{{ $t->descricao }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>                                           

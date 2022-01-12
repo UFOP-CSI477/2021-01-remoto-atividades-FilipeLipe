@@ -13,4 +13,9 @@ class Tema extends Model
         'desdricao',
         'ordem',
     ];
+
+    // 1-Tema tem muitos votos
+    public function temas(){
+        return $this->hasMany(Tema::class);
+    }
 }

@@ -88,25 +88,30 @@
                                             <tr>
                                                 <th>Ordem</th>
                                                 <th>Codigo</th>
-                                                <th>Descrição Tema</th>
                                                 <th>Opção</th>
                                                 <th>Data e Hora</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 
-                                            @foreach($docente as $d)
+                                            @foreach($voto as $v)
                                                 <tr>
-                                                    <td>{{ $d->opcao }}</td>
-                                                    <td>{{ $d->opcao }}</td>
-                                                    <td>{{ $d->opcao }}</td>
-                                                    <td>{{ $d->opcao }}</td>
-                                                    <td>{{ $d->data }}</td>
+                                                    <td>{{ $v->users_id }}</td>
+                                                    <td>{{ $v->temas_id }}</td>
+                                                    <td>{{ $v->opcao }}</td>
+                                                    <td>{{ $v->data }}</td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
                                     </table>
                                 </div>
+                                @if(session('mensagem'))
+
+                                    <div class="alert alert-success">
+                                        {{ session('mensagem') }}
+                                    </div>
+
+                                @endif
                             </div>
                         </div>
                     </div>

@@ -19,7 +19,7 @@ class VotoController extends Controller
         $users = User::orderBy('name') -> get();
         $voto = Voto::orderBy('tema_id') -> get();
         $tema = Tema::orderBy('id') -> get();
-        return view('docente.listarVoto', ['docente' => $voto], ['users' => $users], ['tema' => $tema]);
+        return view('docente.listarVoto', ['voto' => $voto], ['users' => $users], ['tema' => $tema]);
     }
 
     /**
@@ -42,12 +42,18 @@ class VotoController extends Controller
     public function store(Request $request)
     {
         //dd($request);
-
+        
         $voto = new Voto;
-        $voto->opcao = $request->opcao;
-        $voto->data = $request->data;
+        $voto->users_id = 1;
+        $voto->temas_id = $request->selectTema;
+        $voto->opcao = $request->selectOpcao;
+        $voto->data = date("d-m-Y H:i:s");
         $voto->save();
-        session()->flash('mensagem','Docente cadastrado com sucesso!');
+        session()->flash('mensagem','Voto Registrado!');
+        
+        $users = User::orderBy('name') -> get();
+        $voto = Voto::orderBy('tema_id') -> get();
+        return view('docente.listarVoto', ['voto' => $voto], ['users' => $users]);
     }
 
     /**

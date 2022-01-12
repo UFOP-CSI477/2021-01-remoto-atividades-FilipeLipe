@@ -15,7 +15,7 @@ class TemaFactory extends Factory
     {
         return [
             'descricao' => $this->faker->text($maxNbChars = 45),
-            'ordem' => $this->faker->numberBetween($min = 0, $max = 9999)
+            'ordem' => $this->faker->numberBetween($min = 1, $max = 5)
         ];
     }
 }
