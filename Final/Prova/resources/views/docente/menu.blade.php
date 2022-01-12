@@ -100,13 +100,9 @@
                                 <h4 class="header-title text-white">{{ $users->id }} - {{ $users->name }}</h4>
                                 <div class="testimonial-carousel owl-carousel">
                                     <div class="tst-item">
-                                        <div class="tstu-img">
-                                            <img src="../images/team/team-author1.png" alt="author image">
-                                        </div>
                                         <div class="tstu-content">
-                                            <h4 class="tstu-name">Login: admin@admin</h4>
-                                            <span class="profsn">Senha: admin123</span>
-                                            <p>Para realizar o primeiro acesso como ADM</p>
+                                            <h4 class="tstu-name">Exclarecimentos</h4>
+                                            <p>Funcionando 100% XD</p>
                                         </div>
                                     </div>
                                 </div>

@@ -104,10 +104,8 @@
                                         <thead class="text-capitalize">
                                             <tr>
                                                 <th>Ordem</th>
-                                                <th>Codigo</th>
-                                                <th>Opção</th>
-                                                <th>Data e Hora</th>
-                                                <th>Total</th>
+                                                <th>Descrição</th>
+                                                <th>Total de Votos</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -117,17 +115,15 @@
                                                     $total = 0;
                                                 @endphp
                                                 @foreach($voto as $v)
-                                                    @if($v->temas_id == $t->id)
+                                                    @if($v->tema_id == $t->id)
                                                         @php
                                                             $total++
                                                         @endphp
                                                     @endif
                                                 @endforeach
                                                 <tr>
-                                                    <td>{{ $v->users_id }}</td>
-                                                    <td>{{ $v->temas_id }}</td>
-                                                    <td>{{ $v->opcao }}</td>
-                                                    <td>{{ $v->data }}</td>
+                                                    <td>{{ $t->ordem }}</td>
+                                                    <td>{{ $t->descricao }}</td>
                                                     <td>{{ $total }}</td>
                                                 </tr>
                                                 

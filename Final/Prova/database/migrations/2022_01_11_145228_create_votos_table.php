@@ -15,17 +15,17 @@ class CreateVotosTable extends Migration
     {
         Schema::create('votos', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('users_id');
-            $table->unsignedInteger('temas_id');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('tema_id');
             $table->tinyInteger('opcao');
             $table->date('data');
             $table->timestamps();
 
-            $table->foreign('users_id')
+            $table->foreign('user_id')
                 ->references('id')
                 ->on('users');
 
-            $table->foreign('temas_id')
+            $table->foreign('tema_id')
                 ->references('id')
                 ->on('temas');
         });

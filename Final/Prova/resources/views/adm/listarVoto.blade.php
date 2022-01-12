@@ -105,6 +105,9 @@
                                             <tr>
                                                 <th>Ordem</th>
                                                 <th>Codigo</th>
+                                                <th>Descrição do Tema</th>
+                                                <th>ID Docente</th>
+                                                <th>Nome Docente</th>
                                                 <th>Opção</th>
                                                 <th>Data e Hora</th>
                                             </tr>
@@ -113,8 +116,8 @@
 
                                             @foreach($voto as $v)
                                                 <tr>
-                                                    <td>{{ $v->users_id }}</td>
-                                                    <td>{{ $v->temas_id }}</td>
+                                                    <td>{{ $v->user_id }}</td>
+                                                    <td>{{ $v->tema_id }}</td>
                                                     <td>{{ $v->opcao }}</td>
                                                     <td>{{ $v->data }}</td>
                                                 </tr>

@@ -15,7 +15,7 @@ class Tema extends Model
     ];
 
     // 1-Tema tem muitos votos
-    public function temas(){
-        return $this->hasMany(Tema::class);
+    public function votos(){
+        return $this->hasMany(Voto::class);
     }
 }

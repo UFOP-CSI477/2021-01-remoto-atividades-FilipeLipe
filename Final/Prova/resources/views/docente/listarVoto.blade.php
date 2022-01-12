@@ -105,20 +105,37 @@
                                     <table id="dataTable3" class="text-center">
                                         <thead class="text-capitalize">
                                             <tr>
-                                                <th>User_ID</th>
-                                                <th>Temas_id</th>
-                                                <th>Opção</th>
+                                                <th>Ordem</th>
+                                                <th>Codigo</th>
+                                                <th>Descrição do tema</th>
+                                                <th>Opção de Voto</th>
                                                 <th>Data e Hora</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 
                                             @foreach($voto as $v)
-                                                @if($users->id == $v->users_id)
+                                                @if($users->id == $v->user_id)
                                                     <tr>
-                                                        <td>{{ $v->users_id }}</td>
-                                                        <td>{{ $v->temas_id }}</td>
-                                                        <td>{{ $v->opcao }}</td>
+                                                        <td>{{ $v->tema->ordem }}</td>
+                                                        <td>{{ $v->tema->id }}</td>
+                                                        <td>{{ $v->tema->descricao }}</td>
+                                                        @switch( $v->opcao )
+                                                            @case(1)
+                                                                <td>Favorável</td>
+                                                                @break
+
+                                                            @case(2)
+                                                                <td>Contrário</td>
+                                                                @break
+                                                            
+                                                            @case(3)
+                                                                <td>Abstenção</td>
+                                                                @break
+
+                                                            @default
+                                                                <td>Opção não encontrada</td>
+                                                        @endswitch
                                                         <td>{{ $v->data }}</td>
                                                     </tr>
                                                 @endif  

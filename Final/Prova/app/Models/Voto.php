@@ -13,10 +13,10 @@ class Voto extends Model
     //protected $guarded = ['admin']; //Para não persistir algum dado no banco
 
     public function tema(){
-        return $this->belongsTo(Tema::class, 'id');
+        return $this->belongsTo(Tema::class);
     }
 
     public function user(){
-        return $this->belongsTo(User::class, 'id');
+        return $this->belongsTo(User::class);
     }
 }

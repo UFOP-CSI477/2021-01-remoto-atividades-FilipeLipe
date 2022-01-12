@@ -21,7 +21,7 @@ class VotoController extends Controller
         $voto = Voto::orderBy('tema_id') -> get();
         $tema = Tema::orderBy('ordem') -> get();
         if( Auth::user()->type == 1){
-            return view('docente.listarVoto', ['voto' => $voto], ['tema' => $tema], ['users' => $users]);
+            return view('docente.listarVoto', ['voto' => $voto], ['users' => $users], ['tema' => $tema]);
         }elseif(Auth::user()->type == 2){
             return view('adm.listarVoto', ['voto' => $voto], ['tema' => $tema], ['users' => $users]);
         }else{
@@ -58,8 +58,8 @@ class VotoController extends Controller
         //dd($request);
         if( Auth::user()->type == 1){
             $voto = new Voto;
-            $voto->users_id = 1;
-            $voto->temas_id = $request->selectTema;
+            $voto->user_id = Auth::user()->id;
+            $voto->tema_id = $request->selectTema;
             $voto->opcao = $request->selectOpcao;
             $voto->data = date("d-m-Y H:i:s");
             $voto->save();
