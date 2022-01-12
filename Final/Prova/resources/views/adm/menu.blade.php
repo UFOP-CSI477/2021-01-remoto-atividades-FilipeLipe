@@ -99,13 +99,9 @@
                                 <h4 class="header-title text-white">{{ $users->id }} - {{ $users->name }}</h4>
                                 <div class="testimonial-carousel owl-carousel">
                                     <div class="tst-item">
-                                        <div class="tstu-img">
-                                            <img src="../images/team/team-author1.png" alt="author image">
-                                        </div>
                                         <div class="tstu-content">
-                                            <h4 class="tstu-name">Login: admin@admin</h4>
-                                            <span class="profsn">Senha: admin123</span>
-                                            <p>Para realizar o primeiro acesso como ADM</p>
+                                            <h4 class="tstu-name">Exclarecimentos</h4>
+                                            <p>Fernando, na pagina de Adm, tudo o que foi pedido foi implementado, tive apenas um problema em fazer o botão de Totalizar Voto redirecionar para a pagina correta dele, por conta de estar compartilhando a mesma rota que o listar voto. Por conta disso, utilize a rota</p>
                                         </div>
                                     </div>
                                 </div>
