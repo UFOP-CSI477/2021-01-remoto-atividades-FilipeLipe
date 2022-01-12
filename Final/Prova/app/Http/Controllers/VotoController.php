@@ -17,12 +17,13 @@ class VotoController extends Controller
      */
     public function index()
     {
+        $users = Auth::user();
         $voto = Voto::orderBy('tema_id') -> get();
         $tema = Tema::orderBy('id') -> get();
         if( Auth::user()->type == 1){
-            return view('docente.listarVoto', ['voto' => $voto], ['tema' => $tema]);
+            return view('docente.listarVoto', ['voto' => $voto], ['users' => $users], ['tema' => $tema]);
         }elseif(Auth::user()->type == 2){
-            return view('adm.listarVoto', ['voto' => $voto], ['tema' => $tema]);
+            return view('adm.listarVoto', ['voto' => $voto], ['users' => $users], ['tema' => $tema]);
         }else{
             session()->flash('mensagem','Tipo do usuário não correspondente!');
             return view('auth.login');

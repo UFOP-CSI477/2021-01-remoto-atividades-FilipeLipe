@@ -100,12 +100,13 @@
                     <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
+                                <h4 class="header-title">{{ $users->id }} - {{ $users->name }}</h4>
                                 <div class="data-tables datatable-dark">
                                     <table id="dataTable3" class="text-center">
                                         <thead class="text-capitalize">
                                             <tr>
-                                                <th>Ordem</th>
-                                                <th>Codigo</th>
+                                                <th>User_ID</th>
+                                                <th>Temas_id</th>
                                                 <th>Opção</th>
                                                 <th>Data e Hora</th>
                                             </tr>
@@ -113,12 +114,14 @@
                                         <tbody>
 
                                             @foreach($voto as $v)
-                                                <tr>
-                                                    <td>{{ $v->users_id }}</td>
-                                                    <td>{{ $v->temas_id }}</td>
-                                                    <td>{{ $v->opcao }}</td>
-                                                    <td>{{ $v->data }}</td>
-                                                </tr>
+                                                @if($users->id == $v->users_id)
+                                                    <tr>
+                                                        <td>{{ $v->users_id }}</td>
+                                                        <td>{{ $v->temas_id }}</td>
+                                                        <td>{{ $v->opcao }}</td>
+                                                        <td>{{ $v->data }}</td>
+                                                    </tr>
+                                                @endif  
                                             @endforeach
                                         </tbody>
                                     </table>

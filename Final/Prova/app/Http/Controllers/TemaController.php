@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tema;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TemaController extends Controller
 {
@@ -14,8 +15,13 @@ class TemaController extends Controller
      */
     public function index()
     {
-        $tema = Tema::orderBy('ordem') -> get();
-        return view('adm.listarTema', ['tema' => $tema]);
+        if( Auth::user()->type == 1){
+            session()->flash('mensagem','Você não tem permissão para acessar essa pagina!');
+            return redirect()->route('home');
+        }else{
+            $tema = Tema::orderBy('ordem') -> get();
+            return view('adm.listarTema', ['tema' => $tema]);
+        }
     }
 
     /**
@@ -25,7 +31,15 @@ class TemaController extends Controller
      */
     public function create()
     {
-        return view('adm.incluirTema');
+        
+
+        if( Auth::user()->type == 1){
+            session()->flash('mensagem','Você não tem permissão para acessar essa pagina!');
+            return redirect()->route('home');
+        }else{
+            
+            return view('adm.incluirTema');
+        }
     }
 
     /**
@@ -36,12 +50,17 @@ class TemaController extends Controller
      */
     public function store(Request $request)
     {
-        $user = new Tema;
-        $user->descricao = $request->descricao;
-        $user->ordem = $request->selectOpcao;
-        $user->save();
-        session()->flash('mensagem','Tema cadastrado com sucess!');
-        return view('adm.incluirTema');
+        if( Auth::user()->type == 1){
+            session()->flash('mensagem','Você não tem permissão para acessar essa pagina!');
+            return redirect()->route('home');
+        }else{
+            $user = new Tema;
+            $user->descricao = $request->descricao;
+            $user->ordem = $request->selectOpcao;
+            $user->save();
+            session()->flash('mensagem','Tema cadastrado com sucess!');
+            return view('adm.incluirTema');
+        }
     }
 
     /**

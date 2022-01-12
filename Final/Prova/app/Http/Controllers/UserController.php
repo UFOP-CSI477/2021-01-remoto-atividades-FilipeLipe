@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -16,8 +17,13 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = User::orderBy('name') -> get();
-        return view('adm.listarDocente', ['docente' => $user]);
+        if( Auth::user()->type == 1){
+            session()->flash('mensagem','Você não tem permissão para acessar essa pagina!');
+            return redirect()->route('home');
+        }else{
+            $user = User::orderBy('name') -> get();
+            return view('adm.listarDocente', ['docente' => $user]);
+        }
     }
 
     /**
@@ -27,7 +33,12 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('adm.incluirDocente');
+        if( Auth::user()->type == 1){
+            session()->flash('mensagem','Você não tem permissão para acessar essa pagina!');
+            return redirect()->route('home');
+        }else{
+            return view('adm.incluirDocente');
+        }
     }
 
     /**
@@ -38,22 +49,25 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->password == $request->csenha){
-            $user = new User;
-            $user->name = $request->name;
-            $user->email = $request->email;
-            $user->password = Hash::make($request->password);
-            $user->type = 1;
-            $user->remember_token = Str::random(10);
-            $user->save();
-            session()->flash('mensagem','Docente cadastrado com sucesso!');
-            
+        if( Auth::user()->type == 1){
+            session()->flash('mensagem','Você não tem permissão para acessar essa pagina!');
+            return redirect()->route('home');
         }else{
-            session()->flash('mensagem','As senhas não são iguais!');;
+            if($request->password == $request->csenha){
+                $user = new User;
+                $user->name = $request->name;
+                $user->email = $request->email;
+                $user->password = Hash::make($request->password);
+                $user->type = 1;
+                $user->remember_token = Str::random(10);
+                $user->save();
+                session()->flash('mensagem','Docente cadastrado com sucesso!');
+            
+            }else{
+                session()->flash('mensagem','As senhas não são iguais!');;
+            }
+            return view('adm.incluirDocente');
         }
-        return view('adm.incluirDocente');
-        
-
     }
 
     /**
@@ -75,7 +89,12 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('adm.editDocente', ['user' => $user]);
+        if( Auth::user()->type == 1){
+            session()->flash('mensagem','Você não tem permissão para acessar essa pagina!');
+            return redirect()->route('home');
+        }else{
+            return view('adm.editDocente', ['user' => $user]);
+        }
     }
 
     /**
@@ -88,18 +107,23 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         //dd($request->all());
-        if($request->password == $request->csenha){
-            $user->name = $request->name;
-            $user->email = $request->email;
-            $user->password = Hash::make($request->password);
-            $user->save();
-            session()->flash('mensagem','Docente atualizado com sucesso!');
-            
+        if( Auth::user()->type == 1){
+            session()->flash('mensagem','Você não tem permissão para acessar essa pagina!');
+            return redirect()->route('home');
         }else{
-            session()->flash('mensagem','As senhas não são iguais!');;
+            if($request->password == $request->csenha){
+                $user->name = $request->name;
+                $user->email = $request->email;
+                $user->password = Hash::make($request->password);
+                $user->save();
+                session()->flash('mensagem','Docente atualizado com sucesso!');
+                
+            }else{
+                session()->flash('mensagem','As senhas não são iguais!');;
+            }
+            $user = User::orderBy('name') -> get();
+            return view('adm.listarDocente', ['docente' => $user]);
         }
-        $user = User::orderBy('name') -> get();
-        return view('adm.listarDocente', ['docente' => $user]);
     }
 
     /**
