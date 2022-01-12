@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use PhpParser\Node\Stmt\ElseIf_;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        if(Auth::user()->type == 1){
+            return view('docente.menu');
+        }elseif(Auth::user()->type == 2){
+            return view('adm.menu');
+        }else{
+            session()->flash('mensagem','Tipo do usuário não correspondente!');
+            return view('auth.login');
+        }
+        
     }
 }
