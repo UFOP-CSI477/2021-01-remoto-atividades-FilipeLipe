@@ -97,7 +97,7 @@
                     <div class="col-xl-7 col-lg-12 mt-5">
                         <div class="card">
                             <div class="card-body bg1">
-                                <h4 class="header-title text-white">Login Acesso Adm</h4>
+                                <h4 class="header-title text-white">{{ $users->id }} - {{ $users->name }}</h4>
                                 <div class="testimonial-carousel owl-carousel">
                                     <div class="tst-item">
                                         <div class="tstu-img">

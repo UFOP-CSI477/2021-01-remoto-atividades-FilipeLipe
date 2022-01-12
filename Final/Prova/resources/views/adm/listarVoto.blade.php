@@ -99,31 +99,36 @@
                     <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                    <h4 class="header-title">Listar Votos</h4>
                                 <div class="data-tables datatable-dark">
                                     <table id="dataTable3" class="text-center">
                                         <thead class="text-capitalize">
                                             <tr>
                                                 <th>Ordem</th>
                                                 <th>Codigo</th>
-                                                <th>Descrição Tema</th>
                                                 <th>Opção</th>
                                                 <th>Data e Hora</th>
                                             </tr>
-                                         </thead>
+                                        </thead>
                                         <tbody>
 
-                                            @foreach($user as $u)
+                                            @foreach($voto as $v)
                                                 <tr>
-                                                    <td>{{ $u->opcao }}</td>
-                                                    <td>{{ $u->opcao }}</td>
-                                                    <td>{{ $u->opcao }}</td>
-                                                    <td>{{ $u->opcao }}</td>
-                                                    <td>{{ $u->data }}</td>
+                                                    <td>{{ $v->users_id }}</td>
+                                                    <td>{{ $v->temas_id }}</td>
+                                                    <td>{{ $v->opcao }}</td>
+                                                    <td>{{ $v->data }}</td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
                                     </table>
+                                </div>
+                                @if(session('mensagem'))
+
+                                    <div class="alert alert-success">
+                                        {{ session('mensagem') }}
+                                    </div>
+
+                                @endif
                                 </div>
                             </div>
                         </div>

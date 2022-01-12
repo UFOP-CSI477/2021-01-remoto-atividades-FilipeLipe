@@ -100,11 +100,6 @@
                     <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                @foreach($users as $e)
-                                    @if ($e->id == 1)
-                                        <h4 class="header-title">{{ $e->id }} - {{ $e->name }}</h4>
-                                    @endif
-                                @endforeach
                                 <div class="data-tables datatable-dark">
                                     <table id="dataTable3" class="text-center">
                                         <thead class="text-capitalize">

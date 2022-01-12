@@ -25,10 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $users = Auth::user();
         if(Auth::user()->type == 1){
-            return view('docente.menu');
+            return view('docente.menu', ['users' => $users]);
         }elseif(Auth::user()->type == 2){
-            return view('adm.menu');
+            return view('adm.menu', ['users' => $users]);
         }else{
             session()->flash('mensagem','Tipo do usuário não correspondente!');
             return view('auth.login');
