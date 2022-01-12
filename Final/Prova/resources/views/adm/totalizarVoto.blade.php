@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Listar Users</title>
+    <title>Listar Votos Docente</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="../images/icon/logo.png">
     <link rel="stylesheet" href="{{ asset('srtdash/assets/css/bootstrap.min.css') }}">
@@ -99,29 +99,37 @@
                     <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Lista Docentes</h4>
-                                            
                                 <div class="data-tables datatable-dark">
                                     <table id="dataTable3" class="text-center">
                                         <thead class="text-capitalize">
                                             <tr>
-                                                <th>Nome</th>
-                                                <th>Email</th>
+                                                <th>Ordem</th>
                                                 <th>Codigo</th>
-                                                <th>Editar</th>
+                                                <th>Opção</th>
+                                                <th>Data e Hora</th>
+                                                <th>Total</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 
-                                            @foreach($docente as $d)
-                                                @if ($d->type == 1)
-                                                    <tr>
-                                                        <td>{{ $d->name }}</td>
-                                                        <td>{{ $d->email }}</td>
-                                                        <td>{{ $d->id }}</td>
-                                                        <td><a href="{{route('user.edit', $d->id)}}">Editar</a></td>
-                                                    </tr>
-                                                @endif
+                                            @foreach($tema as $t)
+                                                @php
+                                                    $total = 0;
+                                                @endphp
+                                                @foreach($voto as $v)
+                                                    @if($v->temas_id == $t->id)
+                                                        @php
+                                                            $total++
+                                                        @endphp
+                                                    @endif
+                                                @endforeach
+                                                <tr>
+                                                    <td>{{ $v->users_id }}</td>
+                                                    <td>{{ $v->temas_id }}</td>
+                                                    <td>{{ $v->opcao }}</td>
+                                                    <td>{{ $v->data }}</td>
+                                                    <td>{{ $total }}</td>
+                                                </tr>
                                                 
                                             @endforeach
                                         </tbody>
@@ -134,6 +142,7 @@
                                     </div>
 
                                 @endif
+                                </div>
                             </div>
                         </div>
                     </div>

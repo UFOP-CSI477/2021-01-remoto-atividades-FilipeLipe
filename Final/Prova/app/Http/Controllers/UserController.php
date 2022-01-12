@@ -62,11 +62,13 @@ class UserController extends Controller
                 $user->remember_token = Str::random(10);
                 $user->save();
                 session()->flash('mensagem','Docente cadastrado com sucesso!');
+                $users = Auth::user();
+                return view('adm.menu', ['users' => $users]);
             
             }else{
-                session()->flash('mensagem','As senhas não são iguais!');;
+                session()->flash('mensagem','As senhas não são iguais!');
+                return view('adm.incluirDocente');
             }
-            return view('adm.incluirDocente');
         }
     }
 
@@ -117,12 +119,14 @@ class UserController extends Controller
                 $user->password = Hash::make($request->password);
                 $user->save();
                 session()->flash('mensagem','Docente atualizado com sucesso!');
+                $users = Auth::user();
+                return view('adm.menu', ['users' => $users]);
                 
             }else{
-                session()->flash('mensagem','As senhas não são iguais!');;
+                session()->flash('mensagem','As senhas não são iguais!');
+                return view('adm.incluirDocente');
             }
-            $user = User::orderBy('name') -> get();
-            return view('adm.listarDocente', ['docente' => $user]);
+            
         }
     }
 

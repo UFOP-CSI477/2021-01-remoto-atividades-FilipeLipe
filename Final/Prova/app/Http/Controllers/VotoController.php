@@ -19,11 +19,11 @@ class VotoController extends Controller
     {
         $users = Auth::user();
         $voto = Voto::orderBy('tema_id') -> get();
-        $tema = Tema::orderBy('id') -> get();
+        $tema = Tema::orderBy('ordem') -> get();
         if( Auth::user()->type == 1){
-            return view('docente.listarVoto', ['voto' => $voto], ['users' => $users], ['tema' => $tema]);
+            return view('docente.listarVoto', ['voto' => $voto], ['tema' => $tema], ['users' => $users]);
         }elseif(Auth::user()->type == 2){
-            return view('adm.listarVoto', ['voto' => $voto], ['users' => $users], ['tema' => $tema]);
+            return view('adm.totalizarVoto', ['voto' => $voto], ['tema' => $tema], ['users' => $users]);
         }else{
             session()->flash('mensagem','Tipo do usuário não correspondente!');
             return view('auth.login');
@@ -65,9 +65,10 @@ class VotoController extends Controller
             $voto->save();
             session()->flash('mensagem','Voto Registrado!');
             
-            $users = User::orderBy('name') -> get();
+            $users = Auth::user();
             $voto = Voto::orderBy('tema_id') -> get();
-            return view('docente.listarVoto', ['voto' => $voto], ['users' => $users]);
+            $tema = Tema::orderBy('ordem') -> get();
+            return view('docente.menu', ['voto' => $voto], ['users' => $users], ['tema' => $tema]);
         }else{
             session()->flash('mensagem','Você não tem permissão para acessar essa pagina!');
         }
@@ -79,9 +80,9 @@ class VotoController extends Controller
      * @param  \App\Models\Voto  $voto
      * @return \Illuminate\Http\Response
      */
-    public function show(Voto $voto)
+    public function show(Tema $tema)
     {
-        //
+        
     }
 
     /**
